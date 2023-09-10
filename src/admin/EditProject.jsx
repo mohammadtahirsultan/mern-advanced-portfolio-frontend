@@ -12,7 +12,7 @@ const EditProject = () => {
     const [description, setDescription] = useState("")
     const [category, setCategory] = useState("")
     const [link, setLink] = useState("")
-    const [image, setImage] = useState("/logo.webp")
+    const [image, setImage] = useState("")
 
     const navigate = useNavigate()
 
@@ -20,8 +20,6 @@ const EditProject = () => {
     const params = useParams()
 
     const { loading, message, error, project } = useSelector(state => state.project)
-
-    console.log(project);
 
     const imageUploadChange = (e) => {
 
@@ -69,7 +67,6 @@ const EditProject = () => {
         setDescription(project?.description)
         setCategory(project?.category)
         setLink(project?.link)
-        setImage(project?.image)
 
         if (message) {
             toast.success(message)

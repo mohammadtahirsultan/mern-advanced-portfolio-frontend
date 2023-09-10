@@ -5,15 +5,15 @@ import { projectReducer } from './redux/reducers/project'
 import { testimonialReducer } from './redux/reducers/testimonial'
 import { themeReducer } from './redux/reducers/theme'
 
-export const server = "https://mern-advanced-portfolio.vercel.app"
+export const server = "http://mern-advanced-portfolio.vercel.app"
 
 export const store = configureStore({
   reducer: {
     user: userReducer,
     admin: adminReducer,
-    project:projectReducer,
-    testimonial:testimonialReducer,
-    theme:themeReducer,
+    project: projectReducer,
+    testimonial: testimonialReducer,
+    theme: themeReducer,
   },
 })
 

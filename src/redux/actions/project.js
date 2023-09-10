@@ -52,7 +52,7 @@ export const editProject = (formData, id) => async (dispatch) => {
 
         const config = {
 
-            headers: { "Content-Type": "multipart/form-data" },
+            headers: { "Content-Type": "application/json" },
 
             withCredentials: true,
         };
