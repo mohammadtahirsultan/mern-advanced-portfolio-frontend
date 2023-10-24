@@ -59,14 +59,10 @@ const HeaderWithRoutes = () => {
   const { darkMode } = useSelector((state) => state.theme);
 
 
-  const { isAuthenticated, error, user } = useSelector(state => state.user)
+  const { isAuthenticated, user } = useSelector(state => state.user)
 
 
   useEffect(() => {
-    if (error) {
-      toast.error(error)
-    }
-
     dispatch(loadUser())
   }, [])
   const location = useLocation();
