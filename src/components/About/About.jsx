@@ -33,7 +33,7 @@ const About = () => {
                             <div className='flex justify-center items-center flex-col gap-4'>
                                 <img className='rounded-full' src="/logo.webp" alt="Mohammad Tahir" height={70} width={70} />
                                 <h2 className='text-2xl font-semibold'>Mohammad Tahir</h2>
-                                <p className='px-8 text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est facere nobis libero totam perferendis nemo fuga fugiat, reiciendis at sed. Quia quisquam, quis, at illo excepturi reprehenderit atque ducimus ipsa deserunt praesentium libero itaque?</p>
+                                <p className='px-8 text-center'> <span className='font-semibold'>MERN Stack Developer</span> having more than 3 Years of Experience in developing large scale industry projects.Coding is my Passion and Football is my Hobby.</p>
                             </div>
 
 
