@@ -16,7 +16,6 @@ import Users from './admin/Users'
 import Profile from './components/User/Profile'
 import EditProfile from './components/User/EditProfile'
 import { useDispatch, useSelector } from 'react-redux'
-import { toast } from 'react-hot-toast'
 import { loadUser } from './redux/actions/user'
 import { ProtectedRoute } from 'protected-route-react'
 import PageNotFound from './components/PageNotFound'
@@ -61,10 +60,9 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user } = useSelector(state => state.user)
 
-
-  useEffect(() => {
-    dispatch(loadUser())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(loadUser())
+  // }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
@@ -89,7 +87,6 @@ const HeaderWithRoutes = () => {
           <Route path='/register' element={<SignUpForm />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/password/reset/:token' element={<ResetPassword />} />
-
 
 
           {/* Logged In User Routes  */}
