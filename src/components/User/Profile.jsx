@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import DeleteProfile from './DeleteProfileModal'
-import {  useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { toast } from 'react-hot-toast'
 
 
 const Profile = () => {
 
-    const {  error, user, message, isAuthenticated } = useSelector(state => state.user)
+    const { error, user, message, isAuthenticated } = useSelector(state => state.user)
 
     const navigate = useNavigate()
 
@@ -19,7 +19,7 @@ const Profile = () => {
             toast.success(message)
         }
 
-        if (!isAuthenticated) {
+        if (!isAuthenticated || !user) {
             navigate("/login")
         }
 
@@ -30,7 +30,7 @@ const Profile = () => {
     const handleDelete = () => {
         setIsOpen(!isOpen)
     }
-    
+
     return (
         <div
             className="max-w-2xl mx-4 sm:max-w-sm md:max-w-2xl lg:max-w-2xl xl:max-w-4xl sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto h-[65vh]  mt-16 bg-white shadow-xl rounded-lg text-gray-900">
