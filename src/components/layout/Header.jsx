@@ -32,7 +32,9 @@ const Header = () => {
 
   const logoutHandle = async () => {
     await dispatch(logoutUser())
-    refreshPage()
+    setTimeout(() => {
+      refreshPage()
+    }, 2000);
   }
 
   useEffect(() => {
@@ -44,8 +46,11 @@ const Header = () => {
       toast.success(message)
       dispatch({ type: "clearMessage" })
     }
+    if (!isAuthenticated) {
+      navigate("/")
+    }
 
-  }, [error, message])
+  }, [error, message,isAuthenticated])
 
 
 
