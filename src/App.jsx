@@ -91,11 +91,11 @@ const HeaderWithRoutes = () => {
 
           {/* Logged In User Routes  */}
 
+          <Route path='/profile' element={<Profile />} />
           {
             user && isAuthenticated &&
             <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
 
-              <Route path='/profile' element={<Profile />} />
 
               <Route path='/editprofile' element={<EditProfile />} />
 
