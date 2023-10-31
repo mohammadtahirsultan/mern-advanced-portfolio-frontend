@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Typewriter from 'typewriter-effect';
 import { getAllProjects } from '../../redux/actions/project';
 import Loader from '../Loader';
+import { Link } from 'react-router-dom'
 
 const Project = () => {
 
@@ -69,9 +70,9 @@ const ProjectCard = () => {
           {
             projects && projects.map((project) => (
               <div className="sm:w-1/2 mb-10 px-2" key={project._id}>
-                <div className="rounded-lg h-[53vh] overflow-hidden">
+                <Link to={project?.link} className="rounded-lg h-[53vh] overflow-hidden">
                   <img alt="content" className="object-cover object-center h-full w-full" src={project.image.url} />
-                </div>
+                </Link>
                 <h2 className={`${darkMode && 'text-white'} title-font text-2xl font-medium text-gray-900 mt-6 mb-3`}>{project.title}</h2>
                 <p className="leading-relaxed text-base px-8">{project.description}</p>
                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-500'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
