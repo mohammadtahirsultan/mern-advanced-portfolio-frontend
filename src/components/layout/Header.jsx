@@ -76,27 +76,27 @@ const Header = () => {
 
 
         <nav className={`md:ml-auto md:flex flex-col md:flex-row items-center text-base md:space-x-5 ${showMobileNav ? 'flex flex-col gap-5' : 'hidden'}`}>
-          <Link onClick={handleThemeToggle} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold md:pt-2`}>
+          <Link onClick={handleThemeToggle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold md:pt-2`}>
             {
               darkMode ? <img className={`${darkMode && 'hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8' src="/sun.webp" alt="moon" />
             }
           </Link>
-          <Link to={"/"} className={`mr-5 ${darkMode && 'hover:text-gray-400'} hover:text-gray-900 hover:font-bold`}>Home</Link>
-          <Link to={"/projects"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Projects</Link>
-          <Link to={"/about"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>About</Link>
-          <Link to={"/contact"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Contact</Link>
-          <Link to={"/profile"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Profile</Link>
+          <Link to={"/"} className={`transition ease-in-out delay-[700ms] mr-5 ${darkMode && 'hover:text-gray-400'} hover:text-gray-900 hover:font-semibold`}>Home</Link>
+          <Link to={"/projects"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Projects</Link>
+          <Link to={"/about"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>About</Link>
+          <Link to={"/contact"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Contact</Link>
+          <Link to={"/profile"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Profile</Link>
 
 
           {
             user && isAuthenticated ?
-              <Link onClick={logoutHandle} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Logout</Link> :
-              <Link to={"/login"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Login/Register</Link>
+              <Link onClick={logoutHandle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Logout</Link> :
+              <Link to={"/login"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Login/Register</Link>
           }
 
           {
             user && user?.role === "admin" &&
-            <Link to={"/dashboard"} className={`mr-5 ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-bold`}>Dashboard</Link>
+            <Link to={"/dashboard"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Dashboard</Link>
           }
 
         </nav>
