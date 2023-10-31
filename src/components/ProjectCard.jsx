@@ -44,7 +44,7 @@ const ProjectCard = () => {
                                             <div className="flex items-center flex-wrap ">
 
                                                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-500'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
-                                                    <a href={project.link}>See the Demo </a>
+                                                    <a target='blank' href={project.link}>See the Demo </a>
 
                                                 </button>
                                             </div>
