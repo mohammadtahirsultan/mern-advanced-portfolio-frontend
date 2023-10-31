@@ -72,7 +72,7 @@ const SignUpForm = () => {
     return (
         <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img className="mx-auto h-6 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
+                <img className="mx-auto h-12 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
                 <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">Sign Up </h2>
             </div>
 
