@@ -88,7 +88,6 @@ const HeaderWithRoutes = () => {
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/password/reset/:token' element={<ResetPassword />} />
 
-
           {/* Logged In User Routes  */}
 
           <Route path='/profile' element={<Profile />} />

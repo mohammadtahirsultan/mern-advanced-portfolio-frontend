@@ -71,7 +71,7 @@ const EditProfile = () => {
 
         <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img className="mx-auto h-6 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+                <img className="mx-auto h-6 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
                 <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">Edit Profile</h2>
             </div>
 
