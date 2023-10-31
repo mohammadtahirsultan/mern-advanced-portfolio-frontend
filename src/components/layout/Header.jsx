@@ -32,6 +32,7 @@ const Header = () => {
 
   const logoutHandle = async () => {
     await dispatch(logoutUser())
+    navigate("/")
     setTimeout(() => {
       refreshPage()
     }, 2000);
@@ -50,7 +51,7 @@ const Header = () => {
       navigate("/")
     }
 
-  }, [error, message,isAuthenticated])
+  }, [error, message, isAuthenticated])
 
 
 
