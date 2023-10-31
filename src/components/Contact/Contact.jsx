@@ -24,7 +24,7 @@ const Contact = () => {
 
     return (
         <>
-            <div className='h-screen w-screen flex justify-center flex-col my-16 items-center gap-24'>
+            <div className='h-96 mb-12 w-screen flex justify-center flex-col my-16 items-center gap-24'>
 
                 <motion.div
                     className='md:text-2xl text-sm font-semibold mt-16 flex'
