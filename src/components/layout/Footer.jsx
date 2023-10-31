@@ -12,7 +12,7 @@ const Footer = () => {
                     <span className={`${darkMode && 'text-white'} ml-3 text-xl`}>Ghareeb Star</span>
                 </a>
                 <p className={`${darkMode && 'text-white'} text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4`}>© {new Date().getFullYear()} Ghareeb Star —
-                    <a href="https://twitter.com/knyttneve" className={`${darkMode && 'text-white'}  text-gray-600 ml-1`} rel="noopener noreferrer" target="_blank">@tahirsultan</a>
+                    <a href="mailto:tahirsultanofficial@gmail.com" className={`${darkMode && 'text-white'}  text-gray-600 ml-1`} rel="noopener noreferrer" target="_blank">@tahirsultanofficial</a>
                 </p>
 
 
@@ -20,21 +20,21 @@ const Footer = () => {
                     <a className="text-gray-500" href='https://www.youtube.com'>
                         <img src='/yt.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
                     </a>
-                    <a className="ml-3 text-gray-500" href='https://www.facebook.com'>
+                    <a className="ml-3 text-gray-500" href='https://www.facebook.com/ghareebstar'>
                         <img src='/fb.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
-                    <a className="ml-3 text-gray-500" href='https://www.github.com'>
+                    <a className="ml-3 text-gray-500" href='https://www.github.com/ghareebstar'>
                         <img src='/gh.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
 
-                    <a className="ml-3 text-gray-500" href='https://www.linkedin.com'>
+                    <a className="ml-3 text-gray-500" href='https://www.linkedin.com/in/ghareebstar'>
                         <img src='/li.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
 
-                    <a className="ml-3 text-gray-500" href='https://www.instagram.com'>
+                    <a className="ml-3 text-gray-500" href='https://www.instagram.com/ghareebstar'>
                         <img src='/ig.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
