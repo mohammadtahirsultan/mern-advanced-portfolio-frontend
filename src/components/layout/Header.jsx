@@ -58,7 +58,7 @@ const Header = () => {
   return (
 
 
-    <header className={`${darkMode ? 'text-white' : 'text-gray-900'} body-font shadow-lg `}>
+    <header className={`${darkMode ? 'text-white' : 'text-gray-900'} body-font shadow-lg `}  >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link to={"/"} className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <img src="/logo.webp" width={50} height={50} className='rounded-full' alt="Mohammad Tahir" />
