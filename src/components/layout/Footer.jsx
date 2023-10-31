@@ -20,7 +20,7 @@ const Footer = () => {
                     <a className="text-gray-500" href='https://www.youtube.com'>
                         <img src='/yt.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
                     </a>
-                    <a className="ml-3 text-gray-500" href='https://www.facebook.com/ghareebstar'>
+                    <a className="ml-3 text-gray-500" href='https://www.facebook.com/selftaughtstunts1'>
                         <img src='/fb.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
