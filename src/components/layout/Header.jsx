@@ -59,13 +59,13 @@ const Header = () => {
 
 
     <header className={`${darkMode ? 'text-white wave' : 'text-gray-900'} body-font shadow-lg `}  >
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <Link to={"/"} className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img src="/logo.webp" width={50} height={50} className='rounded-full' alt="Mohammad Tahir" />
-          <span className={`${darkMode ? 'text-white ml-3 text-xl' : ' ml-3 text-xl'}`}>Ghareeb Star Programmer</span>
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
+        <Link to={"/"} className="flex title-font font-medium items-center mt-3 md:mt-0 text-gray-900 mb-4 md:mb-0">
+          <img src="/logo.webp" width={50} height={50} className='absolute md:static left-6  rounded-full' alt="Mohammad Tahir" />
+          <span className={`hidden md:inline ${darkMode ? 'text-white ml-3 text-xl' : ' ml-3 text-xl'}`}>Ghareeb Star Programmer</span>
         </Link>
         {/* Mobile Hamburger */}
-        <div className="md:hidden ml-auto">
+        <div className="md:hidden absolute right-6 ml-auto">
           <button
             className="text-gray-900 dark:text-white hover:text-gray-400"
             onClick={toggleMobileNav}
