@@ -35,7 +35,6 @@ const Testimonials = () => {
         dispatch(getAllTestimonials())
     }, [error, message])
 
-    console.log(testimonials);
     return (
         <div className='flex'>
             <Sidebar />
