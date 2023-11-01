@@ -34,6 +34,8 @@ const Testimonials = () => {
 
         dispatch(getAllTestimonials())
     }, [error, message])
+
+    console.log(testimonials);
     return (
         <div className='flex'>
             <Sidebar />
@@ -69,8 +71,8 @@ const Testimonials = () => {
                                             testimonials && testimonials.map((testimonial) => (
                                                 <tr key={testimonial._id}>
 
-                                                    <td className="px-4 py-3">{testimonial.user.name}</td>
-                                                    <td className="px-4 py-3">{testimonial.user.email}</td>
+                                                    <td className="px-4 py-3">{testimonial?.user?.name}</td>
+                                                    <td className="px-4 py-3">{testimonial?.user?.email}</td>
                                                     <td className="px-4 py-3 text-lg text-gray-900">{testimonial.description}</td>
 
                                                     <td className="px-4 py-3 text-lg text-gray-900">
