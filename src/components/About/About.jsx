@@ -12,12 +12,12 @@ const About = () => {
                 <div className="container px-6 md:px-12">
                     <div
                         className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
-                        <h2 className='text-3xl md:text-4xl text-center font-bold text-gray-900'>
+                        <h2 className='text-3xl md:text-[2.9rem] text-center font-bold text-gray-600'>
 
 
                             <Typewriter
                                 options={{
-                                    strings: "About Us",
+                                    strings: "About Me",
                                     autoStart: true,
                                     loop: true,
                                 }}
