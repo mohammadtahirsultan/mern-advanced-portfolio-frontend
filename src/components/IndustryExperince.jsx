@@ -10,7 +10,7 @@ const IndustryExperince = () => {
   const YearCount = useRef(null)
 
   const animateClientCount = () => {
-    animate(0, 500, {
+    animate(0, 20, {
       duration: 1,
       onUpdate: (v) => clientCount.current.textContent = v.toFixed()
     })
@@ -18,7 +18,7 @@ const IndustryExperince = () => {
 
 
   const animateProjectCount = () => {
-    animate(0, 800, {
+    animate(0, 50, {
       duration: 1,
       onUpdate: (v) => projectCount.current.textContent = v.toFixed()
     })
