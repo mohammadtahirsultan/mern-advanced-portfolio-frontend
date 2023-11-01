@@ -54,6 +54,7 @@ const SignUpForm = () => {
 
     }
 
+    const { darkMode } = useSelector((state) => state.theme);
 
 
     useEffect(() => {
@@ -73,20 +74,20 @@ const SignUpForm = () => {
         <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img className="mx-auto h-12 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
-                <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">Sign Up </h2>
+                <h2 className={`mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ${darkMode && "text-white"}`}>Sign Up </h2>
             </div>
 
             <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form onSubmit={registerFormSubmit} className="space-y-1" encType="multipart/form-data">
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+                        <label htmlFor="name" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`}>Full Name</label>
                         <div className="mt-1">
                             <input value={name} type="text" name='name' onChange={(e) => setName(e.target.value)} autoComplete="name" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
                         </div>
                     </div>
 
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                        <label htmlFor="email" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`}>Email address</label>
                         <div className="mt-1">
                             <input value={email} name='email' onChange={(e) => setEmail(e.target.value)} type="email" autoComplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
                         </div>
@@ -94,7 +95,7 @@ const SignUpForm = () => {
 
                     <div>
                         <div className="flex items-center justify-between">
-                            <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900" autoComplete="password" >Password</label>
+                            <label htmlFor="password" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} autoComplete="password" >Password</label>
 
                         </div>
                         <div className="mt-1">
@@ -108,7 +109,7 @@ const SignUpForm = () => {
 
 
                     <div className='pb-2'>
-                        <label htmlFor="image" className="block text-sm font-medium leading-6 text-gray-900">Image</label>
+                        <label htmlFor="image" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`}>Image</label>
                         <div className="mt-1 pb-1">
 
                             <input
@@ -116,7 +117,7 @@ const SignUpForm = () => {
                                 accept="image/*"
                                 required
                                 onChange={imageUploadChange}
-                                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4"
+                                className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-20 dark:text-gray-400 focus:outline-none dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4"
                                 type="file"
 
                             />
@@ -126,14 +127,14 @@ const SignUpForm = () => {
 
                     <div>
                         {
-                            loading ? <Loader /> : <button type="submit" className="flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4">Sign Up</button>
+                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 ${darkMode && "text-black bg-white hover:bg-gray-200"}`}>Sign Up</button>
                         }
                     </div>
                 </form>
 
                 <p className="mt-10 text-center text-sm text-gray-500">
                     Already Have an Account?
-                    <Link to={"/login"} className="font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1">Login Here</Link>
+                    <Link to={"/login"} className={`font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1 ${darkMode && "text-white"}`}>Login Here</Link>
                 </p>
             </div>
         </div>
