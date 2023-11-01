@@ -127,14 +127,14 @@ const SignUpForm = () => {
 
                     <div>
                         {
-                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 ${darkMode && "text-black bg-white hover:bg-gray-200"}`}>Sign Up</button>
+                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 dark:text-black text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 ${darkMode && "text-black bg-white hover:bg-gray-200"}`}>Sign Up</button>
                         }
                     </div>
                 </form>
 
                 <p className="mt-10 text-center text-sm text-gray-500">
                     Already Have an Account?
-                    <Link to={"/login"} className={`font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1 ${darkMode && "text-white"}`}>Login Here</Link>
+                    <Link to={"/login"} className={`font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1 ${darkMode && "text-white "}`}>Login Here</Link>
                 </p>
             </div>
         </div>
