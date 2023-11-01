@@ -2,7 +2,7 @@ import React from 'react'
 import Typewriter from 'typewriter-effect';
 
 const About = () => {
-    
+
     return (
         <div className="container my-0 mx-auto md:px-6">
             <section className="mb-12">
@@ -12,18 +12,18 @@ const About = () => {
                 <div className="container px-6 md:px-12">
                     <div
                         className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
-                        <h2 className='text-3xl md:text-5xl text-center font-bold'>
-                            
-                            
-                    <Typewriter
-                            options={{
-                                strings: "About Us",
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
+                        <h2 className='text-3xl md:text-5xl text-center font-bold text-gray-900'>
 
-                            </h2>
+
+                            <Typewriter
+                                options={{
+                                    strings: "About Us",
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+
+                        </h2>
                         <hr className='bg-black w-36 py-0.5 my-2 mx-auto mb-16' />
 
                         <div className="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-2">
