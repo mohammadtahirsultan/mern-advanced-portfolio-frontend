@@ -73,15 +73,15 @@ const Testimonials = () => {
 
                                                     <td className="px-4 py-3">{testimonial?.user?.name}</td>
                                                     <td className="px-4 py-3">{testimonial?.user?.email}</td>
-                                                    <td className="px-4 py-3 text-lg text-gray-900">{testimonial.description}</td>
+                                                    <td className="px-4 py-3 text-lg text-gray-900">{testimonial?.description}</td>
 
                                                     <td className="px-4 py-3 text-lg text-gray-900">
                                                         <button className='bg-black hover:bg-gray-700 text-white w-full py-0.5 rounded-md '>
-                                                            <Link onClick={() => approveReviewHandle(testimonial._id)}>Approve</Link>
+                                                            <Link onClick={() => approveReviewHandle(testimonial?._id)}>Approve</Link>
                                                         </button>
                                                     </td>
                                                     <td className="px-4 py-3 text-lg text-gray-900">
-                                                        <button className='bg-red-500 hover:bg-red-600 text-white w-full py-0.5 rounded-md px-2' onClick={() => deleteTestimonial(testimonial._id)}>Delete</button>
+                                                        <button className='bg-red-500 hover:bg-red-600 text-white w-full py-0.5 rounded-md px-2' onClick={() => deleteTestimonial(testimonial?._id)}>Delete</button>
                                                     </td>
 
 
