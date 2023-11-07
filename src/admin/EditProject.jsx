@@ -68,16 +68,7 @@ const EditProject = () => {
         setCategory(project?.category)
         setLink(project?.link)
 
-        if (message) {
-            toast.success(message)
-            dispatch({ type: "clearMessage" })
-        }
-        if (error) {
-            toast.error(error)
-            dispatch({ type: "clearError" })
-        }
-
-    }, [message, error, dispatch])
+    }, [])
     return (
 
         <div className='flex'>

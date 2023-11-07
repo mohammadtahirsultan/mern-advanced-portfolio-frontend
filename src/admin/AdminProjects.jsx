@@ -28,7 +28,7 @@ const AdminProjects = () => {
         }
 
         dispatch(getAllProjects())
-    }, [error, message])
+    }, [error, message,dispatch])
     return (
         <div className='flex '>
             <Sidebar />
