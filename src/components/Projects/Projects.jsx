@@ -70,9 +70,9 @@ const ProjectCard = () => {
           {
             projects && projects.map((project) => (
               <div className="sm:w-1/2 mb-10 px-2" key={project._id}>
-                <div className="rounded-lg w-full overflow-hidden">
+                <div className="rounded-lg w-full h-full overflow-hidden">
                   <a target='blank' href={project?.link} >
-                    <img alt="content" className="object-cover object-center h-full w-full" src={project?.image.url} />
+                    <img alt="content" className="w-full h-full" src={project?.image.url} />
                   </a>
                 </div>
                 <h2 className={`${darkMode && 'text-white'} title-font text-2xl font-medium text-gray-900 mt-6 mb-3`}>{project?.title}</h2>
