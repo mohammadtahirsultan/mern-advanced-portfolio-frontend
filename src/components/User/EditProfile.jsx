@@ -55,17 +55,17 @@ const EditProfile = () => {
 
 
 
-    useEffect(() => {
-        if (message) {
-            toast.success(message)
-            dispatch({ type: "clearMessage" })
-        }
-        if (error) {
-            toast.error(error)
-            dispatch({ type: "clearError" })
-        }
+    // useEffect(() => {
+    //     if (message) {
+    //         toast.success(message)
+    //         dispatch({ type: "clearMessage" })
+    //     }
+    //     if (error) {
+    //         toast.error(error)
+    //         dispatch({ type: "clearError" })
+    //     }
 
-    }, [message, error, dispatch])
+    // }, [message, error, dispatch])
     return (
 
 
