@@ -70,7 +70,7 @@ const ProjectCard = () => {
           {
             projects && projects.map((project) => (
               <div className="sm:w-1/2 mb-10 px-2" key={project._id}>
-                <div className="rounded-lg w-full h-full">
+                <div className="rounded-lg w-full h-1/2">
                   <a target='blank' href={project?.link} >
                     <img alt="content" className="w-full h-full object-cover" src={project?.image.url} />
                   </a>
