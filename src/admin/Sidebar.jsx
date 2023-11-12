@@ -12,13 +12,16 @@ const Sidebar = () => {
 
     // const { error, message } = useSelector(state => state.user)
 
-
     const navigate = useNavigate()
 
-
+    const refreshPage = () => {
+        navigate(0);
+      }
     const logoutHandle = async () => {
         await dispatch(logoutUser())
         navigate("/")
+        refreshPage()
+
     }
 
     // useEffect(() => {
