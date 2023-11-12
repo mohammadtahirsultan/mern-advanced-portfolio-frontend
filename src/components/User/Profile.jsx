@@ -12,18 +12,18 @@ const Profile = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (error) {
-            toast.error(error)
-        }
-        if (message) {
-            toast.success(message)
-        }
+        // if (error) {
+        //     toast.error(error)
+        // }
+        // if (message) {
+        //     toast.success(message)
+        // }
 
         if (!isAuthenticated || !user) {
             navigate("/login")
         }
 
-    }, [error, message, isAuthenticated, user])
+    }, [ isAuthenticated, user])
 
     const [isOpen, setIsOpen] = useState(false)
 
