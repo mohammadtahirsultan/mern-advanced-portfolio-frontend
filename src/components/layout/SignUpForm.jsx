@@ -18,7 +18,6 @@ const SignUpForm = () => {
     const isNameValid = (name) => {
         // Check if the name is between 3 and 15 characters
         if (name.length < 3 || name.length > 15) {
-            toast.error("Name Must Be 3-15 Characters Long")
             return false;
         }
 
@@ -75,7 +74,7 @@ const SignUpForm = () => {
         e.preventDefault()
 
         if (!isNameValid(name)) {
-            toast.error('Invalid Name Format');
+            toast.error('Name Must Be 3-15 Characters Long');
             return;
         }
 
@@ -85,7 +84,7 @@ const SignUpForm = () => {
         }
 
         if (!isPasswordValid(password)) {
-            toast.error('Invalid Password Format');
+            toast.error('Minimum 8 Characters with Uppercase,Lowercase,Numbers Only');
             return;
         }
 
