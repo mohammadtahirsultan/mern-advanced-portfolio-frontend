@@ -10,7 +10,7 @@ const Sidebar = () => {
     const dispatch = useDispatch()
 
 
-    const { error, message } = useSelector(state => state.user)
+    // const { error, message } = useSelector(state => state.user)
 
 
     const navigate = useNavigate()
@@ -21,18 +21,18 @@ const Sidebar = () => {
         navigate("/")
     }
 
-    useEffect(() => {
-        if (error) {
-            toast.error(error)
-            dispatch({ type: "clearError" })
-        }
-        if (message) {
-            toast.success(message)
-            dispatch({ type: "clearMessage" })
-        }
+    // useEffect(() => {
+    //     if (error) {
+    //         toast.error(error)
+    //         dispatch({ type: "clearError" })
+    //     }
+    //     if (message) {
+    //         toast.success(message)
+    //         dispatch({ type: "clearMessage" })
+    //     }
 
 
-    }, [error, message])
+    // }, [error, message])
 
 
     return (
