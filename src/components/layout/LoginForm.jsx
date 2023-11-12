@@ -92,7 +92,7 @@ const LoginForm = () => {
 
                     <div>
                         {
-                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 dark:text-black ${darkMode && "text-black bg-white hover:bg-gray-100"}`}>Sign in</button>
+                            loading ? <Loader /> : <button type="submit" className={`${darkMode && "text-black bg-white hover:bg-gray-100"} flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 dark:text-black`}>Sign in</button>
                         }
                     </div>
                 </form>
