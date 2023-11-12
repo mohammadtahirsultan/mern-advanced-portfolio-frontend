@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateProfile } from '../../redux/actions/user'
+import { loadUser, updateProfile } from '../../redux/actions/user'
 import Loader from '../Loader'
 import { useNavigate } from 'react-router-dom'
 
@@ -9,36 +9,89 @@ import { useNavigate } from 'react-router-dom'
 const EditProfile = () => {
 
 
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const dispatch = useDispatch()
+
+    const { loading, user } = useSelector(state => state.user)
+
+    const [name, setName] = useState(user?.name)
+    const [email, setEmail] = useState(user?.email)
     const [password, setPassword] = useState("")
-    const [image, setImage] = useState("/logo.webp")
+    const [image, setImage] = useState(user?.image?.url)
+
+    const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+    const isNameValid = (name) => {
+        // Check if the name is between 3 and 15 characters
+        if (name.length < 3 || name.length > 15) {
+            return false;
+        }
+
+        // Check if the name contains only alphabetic characters and spaces
+        return /^[a-zA-Z\s]+$/.test(name);
+    };
+
+    const isImageValid = (file) => {
+        // Check if the file is not null
+        if (!file) {
+            toast.error('Please Select an Image.');
+            return false;
+        }
+
+        // Check if the file type is an image
+        if (!file.type.startsWith('image/')) {
+            toast.error('Please Select a Valid Image file.');
+            return false;
+        }
+
+        // Check if the file size is within limits (adjust as needed)
+        const maxSizeInBytes = 5 * 1024 * 1024; // 5MB
+        if (file.size > maxSizeInBytes) {
+            toast.error('Image size exceeds the maximum allowed (5MB).');
+            return false;
+        }
+
+        return true;
+    };
 
 
     const navigate = useNavigate()
 
-    const dispatch = useDispatch()
-
-    const { loading, message, error } = useSelector(state => state.user)
-
 
 
     const imageUploadChange = (e) => {
-
         if (e.target.name === "image") {
-            const reader = new FileReader()
-            reader.onload = () => {
-                if (reader.readyState === 2) {
-                    setImage(reader.result)
-                }
-            }
+            const selectedImage = e.target.files[0];
 
-            reader.readAsDataURL(e.target.files[0])
+            if (isImageValid(selectedImage)) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    if (reader.readyState === 2) {
+                        setImage(reader.result);
+                    }
+                };
+
+                reader.readAsDataURL(selectedImage);
+            }
         }
-    }
+    };
     const registerFormSubmit = async (e) => {
         e.preventDefault()
 
+
+        if (!isNameValid(name)) {
+            toast.error('Name Must Be 3-15 Characters Long');
+            return;
+        }
+
+        if (!isEmailValid(email)) {
+            toast.error('Invalid Email Format');
+            return;
+        }
+
+        if (!isPasswordValid(password)) {
+            toast.error('Invalid Password \nMinimum 8 Characters with Uppercase,Lowercase,Numbers Only');
+            return;
+        }
 
         const data = new FormData();
         data.set("name", name)
@@ -54,6 +107,9 @@ const EditProfile = () => {
     }
 
 
+    useEffect(() => {
+        dispatch(loadUser())
+    }, [])
     const { darkMode } = useSelector((state) => state.theme);
 
     return (
