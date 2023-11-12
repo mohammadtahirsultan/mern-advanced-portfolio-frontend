@@ -84,7 +84,7 @@ const SignUpForm = () => {
         }
 
         if (!isPasswordValid(password)) {
-            toast.error('Minimum 8 Characters with Uppercase,Lowercase,Numbers Only');
+            toast.error('Invalid Password \nMinimum 8 Characters with Uppercase,Lowercase,Numbers Only');
             return;
         }
 
