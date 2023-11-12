@@ -13,6 +13,10 @@ const LoginForm = () => {
     const [password, setPassword] = useState("")
 
 
+    const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+    const isNameValid = (name) => /^[a-zA-Z\s]+$/.test(name);
+    
     const navigate = useNavigate()
     const { loading, message, error, isAuthenticated } = useSelector(state => state.user)
     const dispatch = useDispatch()
@@ -22,6 +26,23 @@ const LoginForm = () => {
 
     const formSubmit = (e) => {
         e.preventDefault()
+
+
+        if (!isEmailValid(email)) {
+            toast.error('Invalid email format');
+            return;
+        }
+
+        if (!isPasswordValid(password)) {
+            toast.error('Invalid password format');
+            return;
+        }
+
+        if (!isNameValid(name)) {
+            toast.error('Invalid name format');
+            return;
+        }
+
 
         dispatch(loginUser(email, password))
 
