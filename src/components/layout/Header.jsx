@@ -33,9 +33,9 @@ const Header = () => {
   const logoutHandle = async () => {
     await dispatch(logoutUser())
     navigate("/")
-    setTimeout(() => {
+    // setTimeout(() => {
       refreshPage()
-    }, 2000);
+    // }, 2000);
   }
 
   useEffect(() => {
