@@ -30,7 +30,7 @@ export default function AddReview() {
     }, [error, message])
 
     const handleReview = async () => {
-        if (isDescriptionValid()) {
+        if (!isDescriptionValid()) {
             if (description === "") return toast.error("Please Add Review")
             await dispatch(addReview(description))
             setOpen(false)
