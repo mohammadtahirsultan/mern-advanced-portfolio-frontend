@@ -11,7 +11,7 @@ const SignUpForm = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [image, setImage] = useState("/logo.webp")
+    const [image, setImage] = useState("")
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
@@ -23,21 +23,45 @@ const SignUpForm = () => {
 
     const { loading, message, error, isAuthenticated } = useSelector(state => state.user)
 
+    const isImageValid = (file) => {
+        // Check if the file is not null
+        if (!file) {
+            alert('Please select an image.');
+            return false;
+        }
 
+        // Check if the file type is an image
+        if (!file.type.startsWith('image/')) {
+            alert('Please select a valid image file.');
+            return false;
+        }
+
+        // Check if the file size is within limits (adjust as needed)
+        const maxSizeInBytes = 5 * 1024 * 1024; // 5MB
+        if (file.size > maxSizeInBytes) {
+            alert('Image size exceeds the maximum allowed (5MB).');
+            return false;
+        }
+
+        return true;
+    };
 
     const imageUploadChange = (e) => {
-
         if (e.target.name === "image") {
-            const reader = new FileReader()
-            reader.onload = () => {
-                if (reader.readyState === 2) {
-                    setImage(reader.result)
-                }
-            }
+            const selectedImage = e.target.files[0];
 
-            reader.readAsDataURL(e.target.files[0])
+            if (isImageValid(selectedImage)) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    if (reader.readyState === 2) {
+                        setImage(reader.result);
+                    }
+                };
+
+                reader.readAsDataURL(selectedImage);
+            }
         }
-    }
+    };
     const registerFormSubmit = async (e) => {
         e.preventDefault()
 
