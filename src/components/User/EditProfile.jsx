@@ -107,9 +107,9 @@ const EditProfile = () => {
     }
 
 
-    useEffect(() => {
-        dispatch(loadUser())
-    }, [])
+    // useEffect(() => {
+    //     dispatch(loadUser())
+    // }, [])
     const { darkMode } = useSelector((state) => state.theme);
 
     return (
