@@ -9,13 +9,8 @@ export default function AddReview() {
     const [description, setDescription] = useState("")
 
     const isDescriptionValid = () => {
-        // Check if the description contains only alphabets
-        const containsOnlyAlphabets = /^[a-zA-Z]+$/.test(description);
-
-        // Check if the description contains only numbers
-        const containsOnlyNumbers = /^[0-9]+$/.test(description);
-
-        // Return true if it contains only alphabets or only numbers
+        const containsOnlyAlphabets = /^[a-zA-Z\s]+$/.test(description);
+        const containsOnlyNumbers = /^[0-9\s]+$/.test(description);
         return containsOnlyAlphabets || containsOnlyNumbers;
     };
     const cancelButtonRef = useRef(null)
