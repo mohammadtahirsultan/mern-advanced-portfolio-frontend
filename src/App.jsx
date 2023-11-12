@@ -28,8 +28,6 @@ import ThemeProvider from './components/themeProvider'
 
 const App = () => {
 
-
-
   return (
     <>
 
