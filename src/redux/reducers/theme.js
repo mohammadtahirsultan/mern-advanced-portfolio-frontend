@@ -5,7 +5,7 @@ export const toggleTheme = createAction("theme/toggleTheme");
 
 // Define the initial state
 const initialState = {
-  darkMode: false,
+  darkMode: true,
 };
 
 // Create the reducer
