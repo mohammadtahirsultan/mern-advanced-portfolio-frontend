@@ -13,6 +13,10 @@ const SignUpForm = () => {
     const [password, setPassword] = useState("")
     const [image, setImage] = useState("/logo.webp")
 
+    const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+    const isNameValid = (name) => /^[a-zA-Z\s]+$/.test(name);
+
     const navigate = useNavigate()
 
     const dispatch = useDispatch()
@@ -37,6 +41,20 @@ const SignUpForm = () => {
     const registerFormSubmit = async (e) => {
         e.preventDefault()
 
+        if (!isEmailValid(email)) {
+            toast.error('Invalid email format');
+            return;
+        }
+
+        if (!isPasswordValid(password)) {
+            toast.error('Invalid password format');
+            return;
+        }
+
+        if (!isNameValid(name)) {
+            toast.error('Invalid name format');
+            return;
+        }
 
         const data = new FormData();
         data.set("name", name)
