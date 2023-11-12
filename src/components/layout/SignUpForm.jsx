@@ -15,7 +15,16 @@ const SignUpForm = () => {
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
-    const isNameValid = (name) => /^[a-zA-Z\s]+$/.test(name);
+    const isNameValid = (name) => {
+        // Check if the name is between 3 and 15 characters
+        if (name.length < 3 || name.length > 15) {
+            toast.error("Name Must Be 3-15 Characters Long")
+            return false;
+        }
+
+        // Check if the name contains only alphabetic characters and spaces
+        return /^[a-zA-Z\s]+$/.test(name);
+    };
 
     const navigate = useNavigate()
 
@@ -26,20 +35,20 @@ const SignUpForm = () => {
     const isImageValid = (file) => {
         // Check if the file is not null
         if (!file) {
-            alert('Please select an image.');
+            toast.error('Please select an image.');
             return false;
         }
 
         // Check if the file type is an image
         if (!file.type.startsWith('image/')) {
-            alert('Please select a valid image file.');
+            toast.error('Please select a valid image file.');
             return false;
         }
 
         // Check if the file size is within limits (adjust as needed)
         const maxSizeInBytes = 5 * 1024 * 1024; // 5MB
         if (file.size > maxSizeInBytes) {
-            alert('Image size exceeds the maximum allowed (5MB).');
+            toast.error('Image size exceeds the maximum allowed (5MB).');
             return false;
         }
 
@@ -65,6 +74,11 @@ const SignUpForm = () => {
     const registerFormSubmit = async (e) => {
         e.preventDefault()
 
+        if (!isNameValid(name)) {
+            toast.error('Invalid name format');
+            return;
+        }
+
         if (!isEmailValid(email)) {
             toast.error('Invalid email format');
             return;
@@ -75,10 +89,7 @@ const SignUpForm = () => {
             return;
         }
 
-        if (!isNameValid(name)) {
-            toast.error('Invalid name format');
-            return;
-        }
+
 
         const data = new FormData();
         data.set("name", name)
