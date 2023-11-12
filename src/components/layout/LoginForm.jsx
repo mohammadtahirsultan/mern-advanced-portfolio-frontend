@@ -28,12 +28,12 @@ const LoginForm = () => {
 
 
         if (!isEmailValid(email)) {
-            toast.error('Invalid email format');
+            toast.error('Invalid Email Format');
             return;
         }
 
         if (!isPasswordValid(password)) {
-            toast.error('Invalid password format');
+            toast.error('Minimum 8 Characters with Uppercase,Lowercase,Numbers Only');
             return;
         }
 
