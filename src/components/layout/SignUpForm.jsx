@@ -180,7 +180,7 @@ const SignUpForm = () => {
 
                     <div>
                         {
-                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 dark:text-black text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 ${darkMode && "text-black bg-white hover:bg-gray-200"}`}>Sign Up</button>
+                            loading ? <Loader /> : <button type="submit" className={`flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 dark:text-black text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4 ${darkMode && "text-black bg-white hover:bg-gray-100"}`}>Sign Up</button>
                         }
                     </div>
                 </form>
