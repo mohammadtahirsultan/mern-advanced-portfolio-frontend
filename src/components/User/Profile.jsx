@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast'
 
 const Profile = () => {
 
-    const { error, user, message, isAuthenticated } = useSelector(state => state.user)
+    const {  user,  isAuthenticated } = useSelector(state => state.user)
 
     const navigate = useNavigate()
 
