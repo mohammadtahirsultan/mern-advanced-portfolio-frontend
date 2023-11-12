@@ -146,9 +146,9 @@ const SignUpForm = () => {
                     </div>
 
                     <div>
-                        <div className="flex items-center justify-between">
-                            <label htmlFor="password" className={`block text-xs my-2 leading-6 text-red-600 ${darkMode && "text-white"}`} autoComplete="password" >Password Must Be at least 8 Chracters Long With  1-Digit, 1-Lowercase & 1-Uppercase Letter</label>
-                            <label htmlFor="password" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} autoComplete="password" >Password</label>
+                        <div className="flex flex-col items-center justify-between">
+                            <label htmlFor="password" className={`inline text-xs my-2 leading-6 text-red-600 ${darkMode && "text-white"}`} >At least 8 Chracters with 1-Digit, 1-Lowercase & 1-Uppercase Letter</label>
+                            <label htmlFor="password" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} >Password</label>
 
                         </div>
                         <div className="mt-1">
