@@ -16,7 +16,7 @@ const EditProfile = () => {
     const [name, setName] = useState(user?.name)
     const [email, setEmail] = useState(user?.email)
     const [password, setPassword] = useState("")
-    const [image, setImage] = useState(user?.image?.url)
+    const [image, setImage] = useState("")
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
