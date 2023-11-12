@@ -115,7 +115,7 @@ const EditProfile = () => {
 
                     <div>
                         {
-                            loading ? <Loader /> : <button type="submit" className={`${darkMode && "text-black bg-white hover:bg-gray-100 "} flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 dark:text-black text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4`}>Update</button>
+                            loading ? <Loader /> : <button type="submit" className={`${darkMode ? "text-black bg-white hover:bg-gray-100 flex w-full justify-center rounded-md  px-3 py-1.5 text-sm font-semibold leading-6  shadow-smfocus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4" : "flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offappend-2 focus-visible:outline-gray-900 mt-4"}`}>Update</button>
                         }
                     </div>
                 </form>
