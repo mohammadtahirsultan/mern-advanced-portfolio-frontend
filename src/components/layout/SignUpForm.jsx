@@ -35,13 +35,13 @@ const SignUpForm = () => {
     const isImageValid = (file) => {
         // Check if the file is not null
         if (!file) {
-            toast.error('Please select an image.');
+            toast.error('Please Select an Image.');
             return false;
         }
 
         // Check if the file type is an image
         if (!file.type.startsWith('image/')) {
-            toast.error('Please select a valid image file.');
+            toast.error('Please Select a Valid Image file.');
             return false;
         }
 
@@ -75,17 +75,17 @@ const SignUpForm = () => {
         e.preventDefault()
 
         if (!isNameValid(name)) {
-            toast.error('Invalid name format');
+            toast.error('Invalid Name Format');
             return;
         }
 
         if (!isEmailValid(email)) {
-            toast.error('Invalid email format');
+            toast.error('Invalid Email Format');
             return;
         }
 
         if (!isPasswordValid(password)) {
-            toast.error('Invalid password format');
+            toast.error('Invalid Password Format');
             return;
         }
 
