@@ -16,7 +16,7 @@ const Sidebar = () => {
 
     const refreshPage = () => {
         navigate(0);
-      }
+    }
     const logoutHandle = async () => {
         await dispatch(logoutUser())
         navigate("/")
