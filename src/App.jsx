@@ -58,9 +58,9 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user } = useSelector(state => state.user)
 
-  // useEffect(() => {
-  //   dispatch(loadUser())
-  // }, [])
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
@@ -126,7 +126,7 @@ const HeaderWithRoutes = () => {
 
           }
 
-          <Route path='*' element={<PageNotFound />} />
+          {/* <Route path='*' element={<PageNotFound />} /> */}
 
         </Routes >
         <Footer />
