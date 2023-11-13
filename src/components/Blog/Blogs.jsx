@@ -27,7 +27,7 @@ const Blogs = () => {
     };
   };
 
-  const { currentIndex, images, increment, decrement } = getCarouselData();
+  let { currentIndex, images, increment, decrement } = getCarouselData();
 
   return (
     <div className='bg-white'>
