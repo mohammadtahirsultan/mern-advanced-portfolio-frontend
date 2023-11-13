@@ -34,7 +34,7 @@ const Header = () => {
     await dispatch(logoutUser())
     navigate("/")
     // setTimeout(() => {
-      refreshPage()
+    refreshPage()
     // }, 2000);
   }
 
@@ -58,7 +58,7 @@ const Header = () => {
   return (
 
 
-    <header className={`${darkMode ? 'text-white wave' : 'text-gray-900'} body-font shadow-lg `}  >
+    <header className={`${darkMode ? 'text-white wave bg-gray-800' : 'text-gray-900'} body-font shadow-lg sticky top-0 mb-20`}  >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
         <Link to={"/"} className="flex title-font font-medium items-center mt-3 md:mt-0 text-gray-900 mb-4 md:mb-0">
           <img src="/logo.webp" width={50} height={50} className='absolute md:static left-6  rounded-full' alt="Mohammad Tahir" />
