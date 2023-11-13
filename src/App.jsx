@@ -24,6 +24,8 @@ import AddProject from './admin/AddProject'
 import EditProject from './admin/EditProject'
 import Testimonials from './admin/Testimonials'
 import ThemeProvider from './components/themeProvider'
+import Blogs from './components/Blog/blogs.jsx'
+import Blog from './components/Blog/post.jsx'
 
 
 const App = () => {
@@ -81,6 +83,8 @@ const HeaderWithRoutes = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<LoginForm />} />
           <Route path='/register' element={<SignUpForm />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/blog/:id' element={<Blog />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/password/reset/:token' element={<ResetPassword />} />
 

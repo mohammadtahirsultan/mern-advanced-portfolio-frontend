@@ -58,7 +58,7 @@ const Header = () => {
   return (
 
 
-    <header className={`${darkMode ? 'text-white wave bg-gray-800 ' : 'text-gray-900'} body-font shadow-lg sticky top-0 w-full`}  >
+    <header className={`${darkMode ? 'text-white wave bg-gray-800 ' : 'text-gray-900 bg-white z-10'} body-font shadow-lg sticky top-0 w-full`}  >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
         <Link to={"/"} className="flex title-font font-medium items-center mt-3 md:mt-0 text-gray-900 mb-4 md:mb-0">
           <img src="/logo.webp" width={50} height={50} className='absolute md:static left-6  rounded-full' alt="Mohammad Tahir" />
@@ -85,6 +85,8 @@ const Header = () => {
           <Link to={"/projects"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Projects</Link>
           <Link to={"/about"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>About</Link>
           <Link to={"/contact"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Contact</Link>
+          <Link to={"/blogs"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Blogs</Link>
+          <Link to={"/blog/:id"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Blog</Link>
           <Link to={"/profile"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Profile</Link>
 
 
