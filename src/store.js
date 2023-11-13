@@ -4,6 +4,7 @@ import { adminReducer } from './redux/reducers/admin'
 import { projectReducer } from './redux/reducers/project'
 import { testimonialReducer } from './redux/reducers/testimonial'
 import { themeReducer } from './redux/reducers/theme'
+import { blogReducer } from './redux/actions/blog'
 
 export const server = "https://mern-advanced-portfolio.vercel.app" 
 // export const server = "http://localhost:4000" 
@@ -14,6 +15,7 @@ export const store = configureStore({
     admin: adminReducer,
     project: projectReducer,
     testimonial: testimonialReducer,
+    blog:blogReducer,
     theme: themeReducer,
   },
 })
