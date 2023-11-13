@@ -46,7 +46,7 @@ const Blogs = () => {
       </header>
 
       {/* Topic Nav */}
-      <nav className="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+      <nav className="w-full py-4 border-t border-b bg-gray-100" >
         <div className="block sm:hidden">
           <a
             href="#"

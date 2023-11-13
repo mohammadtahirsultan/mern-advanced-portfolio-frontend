@@ -24,7 +24,7 @@ function Blog() {
         };
     };
 
-    const open = false; // Assuming this is declared somewhere
+    let open = false; // Assuming this is declared somewhere
 
     return (
         <div className="bg-white font-family-karla">
