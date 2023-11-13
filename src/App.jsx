@@ -24,8 +24,8 @@ import AddProject from './admin/AddProject'
 import EditProject from './admin/EditProject'
 import Testimonials from './admin/Testimonials'
 import ThemeProvider from './components/themeProvider'
-import Blogs from './components/Blog/blogs.jsx'
-import Blog from './components/Blog/post.jsx'
+import Blogs from './components/Blog/Blogs.jsx'
+import Blog from './components/Blog/Post.jsx'
 
 
 
