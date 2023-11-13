@@ -1,28 +1,28 @@
 import React from 'react';
 
 function Blog() {
-    const getCarouselData = () => {
-        return {
-            currentIndex: 0,
-            images: [
-                'https://source.unsplash.com/collection/1346951/800x800?sig=1',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=2',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=3',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=4',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=5',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=6',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=7',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=8',
-                'https://source.unsplash.com/collection/1346951/800x800?sig=9',
-            ],
-            increment() {
-                this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
-            },
-            decrement() {
-                this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
-            },
-        };
-    };
+    // const getCarouselData = () => {
+    //     return {
+    //         currentIndex: 0,
+    //         images: [
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=1',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=2',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=3',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=4',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=5',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=6',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=7',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=8',
+    //             'https://source.unsplash.com/collection/1346951/800x800?sig=9',
+    //         ],
+    //         increment() {
+    //             this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex + 1;
+    //         },
+    //         decrement() {
+    //             this.currentIndex = this.currentIndex === this.images.length - 6 ? 0 : this.currentIndex - 1;
+    //         },
+    //     };
+    // };
 
     let open = false; // Assuming this is declared somewhere
 
@@ -157,16 +157,16 @@ function Blog() {
                 <div className="relative w-full flex items-center invisible md:visible md:pb-12">
                     <button
                         className="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
-                        onClick={decrement}
+                        // onClick={decrement}
                     >
                         &#8592;
                     </button>
-                    {images.slice(currentIndex, currentIndex + 6).map((image, index) => (
+                    {/* {images?.slice(currentIndex, currentIndex + 6)?.map((image, index) => (
                         <img key={index} className="w-1/6 hover:opacity-75" src={image} alt={`Carousel Image ${index}`} />
-                    ))}
+                    ))} */}
                     <button
                         className="absolute right-0 bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
-                        onClick={increment}
+                        // onClick={increment}
                     >
                         &#8594;
                     </button>
