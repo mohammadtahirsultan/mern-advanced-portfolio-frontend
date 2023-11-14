@@ -254,14 +254,11 @@ export const logoutUser = () => async (dispatch) => {
             type: "logoutUserRequest"
         })
 
-        const config = {
-            headers: {
-                "Content-Type": "application/json"
-            },
-            withCredentials: true
-        }
 
-        const { data } = await axios.get(`${server}/user/logout`, config)
+
+        const { data } = await axios.get(`${server}/user/logout`, {
+            withCredentials: true
+        })
 
 
         dispatch({
