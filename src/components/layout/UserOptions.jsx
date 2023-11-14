@@ -54,7 +54,6 @@ const UserOptions = ({ user }) => {
   }
  async function Logout() {
     await dispatch(logoutUser());
-    navigate("/login");
   }
 
   useEffect(() => {
