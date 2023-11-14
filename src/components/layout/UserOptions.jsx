@@ -52,8 +52,8 @@ const UserOptions = ({ user }) => {
   function Cart() {
     navigate("/cart");
   }
-  function Logout() {
-    dispatch(logoutUser());
+ async function Logout() {
+    await dispatch(logoutUser());
     navigate("/login");
   }
 
