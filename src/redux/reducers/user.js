@@ -22,8 +22,6 @@ export const userReducer = createReducer({}, {
     },
 
 
-
-
     loginUserRequest: (state) => {
         state.loading = true
         state.isAuthenticated = false
@@ -42,8 +40,6 @@ export const userReducer = createReducer({}, {
         state.isAuthenticated = false
         state.error = action.payload
     },
-
-
 
 
     registerUserRequest: (state) => {
