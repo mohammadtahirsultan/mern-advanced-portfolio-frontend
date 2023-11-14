@@ -32,7 +32,9 @@
 .menuBurgerItem1 {
  background-color: rgb(34, 0, 255);
 }
-
+.MuiSvgIcon-root{
+  font-size: 3rem;
+}
 .menuBurgerItem{
   z-index: 12;
   padding: .2rem 0;

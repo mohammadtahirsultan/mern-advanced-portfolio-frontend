@@ -1,11 +1,10 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
 import logo from "/logo.png";
-import {AccountCircle} from '@mui/icons-material';
+import { Call, LockPerson} from '@mui/icons-material';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/reducers/theme";
 import { Link } from "react-router-dom";
-import ArticleIcon from '@mui/icons-material/Article';
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -16,9 +15,9 @@ const Header = () => {
   return (
   //  <div className="h-[6rem] flex justify-between items-center w-screen px-20">
  <div>
-   <div className="h-[6.4rem] shad  ow-lg flex sticky top-0 w-full mb-8 z-50">
+   <div className="h-[6.4rem] shadow-lg flex sticky top-0 w-full mb-8 z-50">
      <ReactNavbar
-      navColor1="white"
+      navColor1={`${darkMode?"black":"white"}`}
       navColor2={"hsl(219, 410%, 10%)"}
       burgerColor={"#ef4036"}
       burgerColorHover={"#ef4036"}
@@ -30,30 +29,23 @@ const Header = () => {
       link1Text="Home"
       link2Text="About"
       link3Text="Portfolio"
-      link4Text="Contact"
-      link5Text="Blogs"
+      link4Text="Blogs"
       link1Url="/"
       link2Url="/about"
       link3Url="/projects"
-      link4Url="/contact"
-      link5Url="/blogs"
+      link4Url="/blogs"
       link1Color="white"
       link1Size="1.5rem"
       link1Padding="3vmax"
-      articleIcon={true}
-      ArticleIconElement={ArticleIcon}
-      cartIcon={true}
-      CartIconElement={ArticleIcon}
+      searchIcon={true}
+      SearchIconElement={Call}
       profileIcon={true}
-      ProfileIconElement={AccountCircle}
-      profileIconSize={"4.5vmax"}
-      cartIconSize={"2.5vmax"}
-      searchIconSize={"2.5vmax"}
+      ProfileIconElement={LockPerson}
+      profileIconSize={"3rem"}
+      searchIconSize={"5rem"}
       searchIconMargin={"10"}
-      cartIconMargin={"10"}
       profileIconMargin={"10"}
-      searchIconUrl={"/search"}
-      cartIconUrl={"/cart"}
+      searchIconUrl={"/contact"}
       profileIconUrl={"/login"}
       profileIconColorHover= {"#ef4036"}
       searchIconColorHover= {"#ef4036"}
@@ -62,6 +54,7 @@ const Header = () => {
       link2ColorHover= {"#ef4036"}
       link3ColorHover= {"#ef4036"}
       link4ColorHover= {"#ef4036"}
+
     />
     <div className="absolute right-12 top-10 h-[5rem]">
     <Link onClick={handleThemeToggle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold md:pt-2`}>
