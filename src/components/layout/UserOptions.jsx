@@ -69,7 +69,7 @@ const UserOptions = ({ user }) => {
   }, [dispatch, message, error]);
   return (
     <>
-      <Backdrop open={open} style={{ zIndex: "10" }} className="mt-[2rem]" />
+      <Backdrop open={open} style={{ zIndex: "10" }} className="mt-[3rem]" />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
         className="speedDial mt-[3.4rem]"
