@@ -20,7 +20,7 @@ const Profile = () => {
             navigate("/login")
         }
 
-    }, [])
+    }, [user])
 
     const [isOpen, setIsOpen] = useState(false)
 
