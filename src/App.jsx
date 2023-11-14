@@ -26,6 +26,7 @@ import Testimonials from './admin/Testimonials'
 import Blogs from './components/Blog/Blogs.jsx'
 import Blog from './components/Blog/Post.jsx'
 import ThemeProvider from './components/themeProvider'
+import UserOptions from './components/layout/UserOptions.jsx'
 
 
 
@@ -57,7 +58,7 @@ const HeaderWithRoutes = () => {
   const { darkMode } = useSelector((state) => state.theme);
 
 
-  const { isAuthenticated, user,message } = useSelector(state => state.user)
+  const { isAuthenticated, user, message } = useSelector(state => state.user)
 
   useEffect(() => {
     dispatch(loadUser())
@@ -68,68 +69,68 @@ const HeaderWithRoutes = () => {
   return (
 
 
-      <div className={` ${darkMode ? `dark:bg-gray-800 dark:text-white` : `bg-white`}`}>
+    <div className={` ${darkMode ? `dark:bg-gray-800 dark:text-white` : `bg-white`}`}>
 
 
-        {showHeader && <Header />}
-
-        <Routes>
-
-
-          {/* Any Body Can Access These Routes  */}
-
-          <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<LoginForm />} />
-          <Route path='/register' element={<SignUpForm />} />
-          <Route path='/blogs' element={<Blogs />} />
-          <Route path='/blog/:id' element={<Blog />} />
-          <Route path='/forgotpassword' element={<ForgotPassword />} />
-          <Route path='/password/reset/:token' element={<ResetPassword />} />
-
-          {/* Logged In User Routes  */}
-
-          <Route path='/profile' element={<Profile />} />
-          {
-            user && isAuthenticated &&
-            <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+      {showHeader && <Header />}
+      {user && isAuthenticated && <UserOptions user={user} />}
+      <Routes>
 
 
-              <Route path='/editprofile' element={<EditProfile />} />
+        {/* Any Body Can Access These Routes  */}
 
-            </Route>
+        <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<LoginForm />} />
+        <Route path='/register' element={<SignUpForm />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/blog/:id' element={<Blog />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
+        <Route path='/password/reset/:token' element={<ResetPassword />} />
 
-          }
+        {/* Logged In User Routes  */}
+
+        <Route path='/profile' element={<Profile />} />
+        {
+          user && isAuthenticated &&
+          <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
 
 
-          {/* Admin Routes  */}
+            <Route path='/editprofile' element={<EditProfile />} />
 
-          {
-            user && isAuthenticated && user.role === "admin" &&
-            < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}>
+          </Route>
 
-              <Route path='/dashboard/testimonials' element={<Testimonials />} />
-              <Route path='/dashboard/users' element={<Users />} />
-              <Route path='/dashboard/projects' element={<AdminProjects />} />
-              <Route path='/dashboard' element={<Dashboard />} />
+        }
 
-              <Route path='/dashboard/addprojects' element={<AddProject />} />
 
-              <Route path='/dashboard/project/:id' element={<EditProject />} />
+        {/* Admin Routes  */}
 
-              <Route path='/dashboard/user/:id' element={<UpdateRole />} />
+        {
+          user && isAuthenticated && user.role === "admin" &&
+          < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}>
 
-            </Route>
+            <Route path='/dashboard/testimonials' element={<Testimonials />} />
+            <Route path='/dashboard/users' element={<Users />} />
+            <Route path='/dashboard/projects' element={<AdminProjects />} />
+            <Route path='/dashboard' element={<Dashboard />} />
 
-          }
+            <Route path='/dashboard/addprojects' element={<AddProject />} />
 
-          {/* <Route path='*' element={<PageNotFound />} /> */}
+            <Route path='/dashboard/project/:id' element={<EditProject />} />
 
-        </Routes >
-        <Footer />
-      </div>
+            <Route path='/dashboard/user/:id' element={<UpdateRole />} />
+
+          </Route>
+
+        }
+
+        {/* <Route path='*' element={<PageNotFound />} /> */}
+
+      </Routes >
+      <Footer />
+    </div>
 
 
 
