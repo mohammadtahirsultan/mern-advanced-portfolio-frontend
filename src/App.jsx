@@ -60,9 +60,10 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user, message } = useSelector(state => state.user)
 
-  // useEffect(() => {
-  //   dispatch(loadUser())
-  // }, [])
+  useEffect(() => {
+    toast.success(message)
+    dispatch({type:"clearError"})
+  }, [message])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
