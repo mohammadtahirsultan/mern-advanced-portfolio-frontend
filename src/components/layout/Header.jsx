@@ -34,7 +34,7 @@ const Header = () => {
     await dispatch(logoutUser())
     navigate("/")
     // setTimeout(() => {
-    refreshPage()
+    // refreshPage()
     // }, 2000);
   }
 
