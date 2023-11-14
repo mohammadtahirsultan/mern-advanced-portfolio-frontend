@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import DashboardIcon from "@material-ui/icons-material/Dashboard";
-import PersonIcon from "@material-ui/icons-material/Person";
-import ExitToApp from "@material-ui/icons-material/ExitToApp";
-import ShoppingCartIcon from "@material-ui/icons-material/ShoppingCart";
-import ListAlt from "@material-ui/icons-material/ListAlt";
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PersonIcon from "@mui/icons-material/Person";
+import ExitToApp from "@mui/icons-material/ExitToApp";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { ListAlt } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { Backdrop,SpeedDial,SpeedDialAction } from '@mui/material';
+import { Backdrop, SpeedDial, SpeedDialAction } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { logoutUser } from "../../redux/actions/user";
-const UserOptions = ({user}) => {
+const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
 
   const { message, error } = useSelector((state) => state.user);
