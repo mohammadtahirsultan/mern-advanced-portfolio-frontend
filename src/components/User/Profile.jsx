@@ -3,11 +3,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import DeleteProfile from './DeleteProfileModal'
 import { useSelector } from 'react-redux'
 import { toast } from 'react-hot-toast'
+import { loadUser } from '../../redux/actions/user'
 
 
 const Profile = () => {
 
-    const {  user,  isAuthenticated } = useSelector(state => state.user)
+    const { user, isAuthenticated } = useSelector(state => state.user)
 
     const navigate = useNavigate()
 
@@ -19,11 +20,13 @@ const Profile = () => {
         //     toast.success(message)
         // }
 
+        dispatch(loadUser())
+
         if (!isAuthenticated || !user) {
             navigate("/login")
         }
 
-    }, [ isAuthenticated, user])
+    }, [isAuthenticated, user])
 
     const [isOpen, setIsOpen] = useState(false)
 

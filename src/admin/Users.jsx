@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteUserProfile, getAllUsers } from '../redux/actions/admin'
 import { toast } from 'react-hot-toast'
 import Loader from '../components/Loader'
+import { loadUser } from '../redux/actions/user'
 
 const Users = () => {
 
@@ -25,6 +26,7 @@ const Users = () => {
             toast.success(message)
             dispatch({ type: "clearMessage" })
         }
+        dispatch(loadUser())
 
         dispatch(getAllUsers())
     }, [error, message])

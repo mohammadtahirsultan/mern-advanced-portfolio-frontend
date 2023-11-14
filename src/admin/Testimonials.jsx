@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-hot-toast'
 import Loader from '../components/Loader'
 import { approveTestimonial, deleteUserTestimonial, getAllTestimonials } from '../redux/actions/testimonial'
+import { loadUser } from '../redux/actions/user'
 
 const Testimonials = () => {
 
@@ -30,8 +31,10 @@ const Testimonials = () => {
         //     dispatch({ type: "clearMessage" })
         // }
 
+        dispatch(loadUser())
+
         dispatch(getAllTestimonials())
-    }, [ ])
+    }, [])
 
     return (
         <div className='flex'>

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-hot-toast'
 import { deleteProject, getAllProjects } from '../redux/actions/project'
 import Loader from '../components/Loader'
+import { loadUser } from '../redux/actions/user'
 
 const AdminProjects = () => {
 
@@ -26,9 +27,10 @@ const AdminProjects = () => {
             toast.success(message)
             dispatch({ type: "clearMessage" })
         }
+        dispatch(loadUser())
 
         dispatch(getAllProjects())
-    }, [error, message,dispatch])
+    }, [error, message, dispatch])
     return (
         <div className='flex '>
             <Sidebar />
