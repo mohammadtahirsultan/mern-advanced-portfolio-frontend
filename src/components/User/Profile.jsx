@@ -14,20 +14,13 @@ const Profile = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        // if (error) {
-        //     toast.error(error)
-        // }
-        // if (message) {
-        //     toast.success(message)
-        // }
-
         dispatch(loadUser())
 
-        if (!isAuthenticated || !user) {
+        if (!isAuthenticated && !user) {
             navigate("/login")
         }
 
-    }, [isAuthenticated, user])
+    }, [dispatch])
 
     const [isOpen, setIsOpen] = useState(false)
 
