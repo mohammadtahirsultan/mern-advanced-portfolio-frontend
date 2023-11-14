@@ -5,26 +5,27 @@ import { server } from "../../store"
 
 export const loadUser = () => async (dispatch) => {
     try {
-      dispatch({
-        type: "loadUserRequest",
-      });
-  
-      const { data } = await axios.get(`${server}/user/profile`, {
-        withCredentials: true,
-      });
-  
-      dispatch({
-        type: "loadUserSuccess",
-        payload: data,
-      });
+        dispatch({
+            type: "loadUserRequest",
+        });
+
+        const { data } = await axios.get(`${server}/user/profile`, {
+            withCredentials: true,
+        });
+        console.log('Load User Data', data);
+
+        dispatch({
+            type: "loadUserSuccess",
+            payload: data,
+        });
     } catch (error) {
-      dispatch({
-        type: "loadUserFail",
-        payload: error.response.data.message,
-      });
+        dispatch({
+            type: "loadUserFail",
+            payload: error.response.data.message,
+        });
     }
-  };
-  
+};
+
 
 export const loginUser = (email, password) => async (dispatch) => {
 
@@ -235,25 +236,25 @@ export const deleteProfile = () => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
     try {
-      dispatch({
-        type: "logoutUserRequest",
-      });
-  
-      const { data } = await axios.get(`${server}/user/logout`, {
-        withCredentials: true,
-      });
-  
-      dispatch({
-        type: "logoutUserSuccess",
-        payload: data,
-      });
+        dispatch({
+            type: "logoutUserRequest",
+        });
+
+        const { data } = await axios.get(`${server}/user/logout`, {
+            withCredentials: true,
+        });
+
+        dispatch({
+            type: "logoutUserSuccess",
+            payload: data,
+        });
     } catch (error) {
-      dispatch({
-        type: "logoutUserFail",
-        payload: error.response.data.message,
-      });
+        dispatch({
+            type: "logoutUserFail",
+            payload: error.response.data.message,
+        });
     }
-  };
+};
 
 
 
