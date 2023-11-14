@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
-import logo from "/logo.png";
+import logo from "./logo.png";
 import { Call, LockPerson} from '@mui/icons-material';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/reducers/theme";
