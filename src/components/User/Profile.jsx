@@ -14,7 +14,7 @@ const Profile = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(loadUser())
+        // dispatch(loadUser())
 
         if (!isAuthenticated || !user) {
             navigate("/login")
