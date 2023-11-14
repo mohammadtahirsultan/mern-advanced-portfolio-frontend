@@ -24,7 +24,7 @@ export const loadUser = () => async (dispatch) => {
       });
     }
   };
-
+  
 
 export const loginUser = (email, password) => async (dispatch) => {
 

@@ -6,21 +6,19 @@ export const userReducer = createReducer({}, {
 
 
     loadUserRequest: (state) => {
-        state.loading = true
-        state.isAuthenticated = false
+        state.loading = true;
     },
-
     loadUserSuccess: (state, action) => {
-        state.loading = false
-        state.isAuthenticated = true
-        state.user = action.payload.user
-        state.error = null
+        state.loading = false;
+        state.isAuthenticated = true;
+        state.user = action.payload.user;
+        state.error = null;
     },
-
     loadUserFail: (state, action) => {
-        state.loading = false
-        state.isAuthenticated = false
-        state.error = action.payload
+        state.loading = false;
+        state.isAuthenticated = false;
+        state.user = null;
+        state.error = action.payload;
     },
 
 
@@ -75,7 +73,7 @@ export const userReducer = createReducer({}, {
     logoutUserSuccess: (state, action) => {
         state.loading = false
         state.message = action.payload.message
-        state.isAuthenticated=false
+        state.isAuthenticated = false
         state.user = null
         state.error = null
     },
@@ -149,9 +147,9 @@ export const userReducer = createReducer({}, {
         state.loading = false
         state.error = action.payload
     },
-   
-   
-   
+
+
+
 
 
 
