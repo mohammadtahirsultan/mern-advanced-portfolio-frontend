@@ -16,11 +16,11 @@ const Profile = () => {
     useEffect(() => {
         dispatch(loadUser())
 
-        if (!isAuthenticated && !user) {
+        if (!isAuthenticated || !user) {
             navigate("/login")
         }
 
-    }, [dispatch])
+    }, [dispatch, isAuthenticated])
 
     const [isOpen, setIsOpen] = useState(false)
 
