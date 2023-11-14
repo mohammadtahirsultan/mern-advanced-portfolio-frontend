@@ -4,37 +4,26 @@ import { server } from "../../store"
 
 
 export const loadUser = () => async (dispatch) => {
-
     try {
-
-        dispatch({
-            type: "loadUserRequest"
-        })
-
-        const config = {
-            headers: {
-                "Content-Type": "Application/json"
-            },
-            withCredentials: true
-        }
-
-        const { data } = await axios.get(`${server}/user/profile`, config)
-
-
-        dispatch({
-            type: "loadUserSuccess",
-            payload: data
-        })
-
-
+      dispatch({
+        type: "loadUserRequest",
+      });
+  
+      const { data } = await axios.get(`${server}/user/profile`, {
+        withCredentials: true,
+      });
+  
+      dispatch({
+        type: "loadUserSuccess",
+        payload: data,
+      });
     } catch (error) {
-        dispatch({
-            type: "loadUserFail",
-            payload: error.response.data.message
-        })
+      dispatch({
+        type: "loadUserFail",
+        payload: error.response.data.message,
+      });
     }
-}
-
+  };
 
 
 export const loginUser = (email, password) => async (dispatch) => {
