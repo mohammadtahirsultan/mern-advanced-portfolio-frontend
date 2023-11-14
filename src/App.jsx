@@ -60,9 +60,9 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user, message } = useSelector(state => state.user)
 
-  useEffect(() => {
-    dispatch(loadUser())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(loadUser())
+  // }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
