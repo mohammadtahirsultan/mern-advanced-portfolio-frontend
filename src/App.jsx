@@ -63,7 +63,7 @@ const HeaderWithRoutes = () => {
 
   useEffect(() => {
     toast.success(message)
-    dispatch({type:"clearError"})
+    dispatch({type:"clearMessage"})
   }, [message])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
@@ -128,7 +128,7 @@ const HeaderWithRoutes = () => {
 
         }
 
-        {/* <Route path='*' element={<PageNotFound />} /> */}
+        <Route path='*' element={<PageNotFound />} />
 
       </Routes >
       <Footer />
