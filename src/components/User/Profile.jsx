@@ -20,7 +20,7 @@ const Profile = () => {
             navigate("/login")
         }
 
-    }, [dispatch, isAuthenticated])
+    }, [])
 
     const [isOpen, setIsOpen] = useState(false)
 
