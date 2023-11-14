@@ -17,7 +17,6 @@ const Header = () => {
 
   const { darkMode } = useSelector((state) => state.theme);
 
-
   const handleThemeToggle = () => {
     dispatch(toggleTheme());
   };
