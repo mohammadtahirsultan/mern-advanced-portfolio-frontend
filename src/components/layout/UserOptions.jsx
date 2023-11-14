@@ -13,17 +13,16 @@ const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
 
   const { message, error } = useSelector((state) => state.user);
-  const { cartItems } = useSelector((state) => state.cart);
   const actions = [
     { icon: <PersonIcon />, name: "Account", func: Person },
     { icon: <ListAlt />, name: "Orders", func: Orders },
     {
       icon: (
         <ShoppingCartIcon
-          style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+          // style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
         />
       ),
-      name: `Cart(${cartItems.length})`,
+      // name: `Cart(${cartItems.length})`,
       func: Cart,
     },
     { icon: <ExitToApp />, name: "Logout", func: Logout },
@@ -77,7 +76,7 @@ const UserOptions = ({ user }) => {
         icon={
           <img
             className="speedDialIcon"
-            src={user && user.image.url ? user.image.url : "/Profile.png"}
+            src={user && user.image.url ? user.image.url : "/logo.webp"}
             alt="Profile"
           />
         }
