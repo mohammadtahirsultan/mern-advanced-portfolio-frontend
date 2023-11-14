@@ -23,20 +23,6 @@ const Header = () => {
 
   const { error, user, message, isAuthenticated } = useSelector(state => state.user)
 
-  const navigate = useNavigate()
-
-  const refreshPage = () => {
-    navigate(0);
-  }
-
-  const logoutHandle = async () => {
-    await dispatch(logoutUser())
-    navigate("/")
-    // setTimeout(() => {
-    // refreshPage()
-    // }, 2000);
-  }
-
   useEffect(() => {
     if (error) {
       toast.error(error)
@@ -46,11 +32,9 @@ const Header = () => {
       toast.success(message)
       dispatch({ type: "clearMessage" })
     }
-    // if (!isAuthenticated) {
-    //   navigate("/")
-    // }
+  
 
-  }, [error, message, user, isAuthenticated])
+  }, [error, message])
 
 
   return (
@@ -85,19 +69,6 @@ const Header = () => {
           <Link to={"/contact"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Contact</Link>
           <Link to={"/blogs"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Blogs</Link>
           <Link to={"/blog/:id"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Blog</Link>
-          <Link to={"/profile"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Profile</Link>
-
-
-          {
-            user && isAuthenticated ?
-              <Link onClick={logoutHandle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Logout</Link> :
-              <Link to={"/login"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Login/Register</Link>
-          }
-
-          {
-            user && user?.role === "admin" &&
-            <Link to={"/dashboard"} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold`}>Dashboard</Link>
-          }
 
         </nav>
 
