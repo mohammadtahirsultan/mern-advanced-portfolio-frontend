@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from "@mui/icons-material/Person";
 import ExitToApp from "@mui/icons-material/ExitToApp";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { ListAlt } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { Backdrop, SpeedDial, SpeedDialAction } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
@@ -15,16 +13,7 @@ const UserOptions = ({ user }) => {
   const { message, error } = useSelector((state) => state.user);
   const actions = [
     { icon: <PersonIcon />, name: "Account", func: Person },
-    { icon: <ListAlt />, name: "Orders", func: Orders },
-    {
-      icon: (
-        <ShoppingCartIcon
-        // style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
-        />
-      ),
-      // name: `Cart(${cartItems.length})`,
-      func: Cart,
-    },
+    
     { icon: <ExitToApp />, name: "Logout", func: Logout },
   ];
 
@@ -46,12 +35,7 @@ const UserOptions = ({ user }) => {
   function Person() {
     navigate("/profile");
   }
-  function Orders() {
-    navigate("/orders");
-  }
-  function Cart() {
-    navigate("/cart");
-  }
+
  async function Logout() {
     await dispatch(logoutUser());
   }
