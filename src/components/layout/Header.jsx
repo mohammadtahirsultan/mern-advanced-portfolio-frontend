@@ -1,12 +1,11 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
 import logo from "/logo.png";
-import {Search} from '@mui/icons-material';
 import {AccountCircle} from '@mui/icons-material';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/reducers/theme";
 import { Link } from "react-router-dom";
-
+import ArticleIcon from '@mui/icons-material/Article';
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -32,17 +31,19 @@ const Header = () => {
       link2Text="About"
       link3Text="Portfolio"
       link4Text="Contact"
+      link5Text="Blogs"
       link1Url="/"
       link2Url="/about"
       link3Url="/projects"
       link4Url="/contact"
+      link5Url="/blogs"
       link1Color="white"
       link1Size="1.5rem"
       link1Padding="3vmax"
-      searchIcon={true}
-      SearchIconElement={Search}
+      articleIcon={true}
+      ArticleIconElement={ArticleIcon}
       cartIcon={true}
-      CartIconElement={Search}
+      CartIconElement={ArticleIcon}
       profileIcon={true}
       ProfileIconElement={AccountCircle}
       profileIconSize={"4.5vmax"}
