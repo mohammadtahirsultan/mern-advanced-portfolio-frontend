@@ -72,7 +72,7 @@ const UserOptions = ({ user }) => {
       <Backdrop open={open} style={{ zIndex: "10" }} className="mt-[2rem]" />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
-        className="speedDial"
+        className="speedDial mt-[2rem]"
         icon={
           <img
             className="speedDialIcon"
