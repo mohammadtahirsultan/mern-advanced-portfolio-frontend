@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ListAlt from "@material-ui/icons/ListAlt";
 import { useNavigate } from "react-router-dom";
 import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
-import { Backdrop } from "@material-ui/core";
+import { Backdrop } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { logoutUser } from "../../redux/actions/user";
