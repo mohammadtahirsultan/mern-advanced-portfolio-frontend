@@ -47,11 +47,11 @@ const Header = () => {
       toast.success(message)
       dispatch({ type: "clearMessage" })
     }
-    if (!isAuthenticated) {
-      navigate("/")
-    }
+    // if (!isAuthenticated) {
+    //   navigate("/")
+    // }
 
-  }, [error, message, isAuthenticated])
+  }, [error, message, user, isAuthenticated])
 
 
 
