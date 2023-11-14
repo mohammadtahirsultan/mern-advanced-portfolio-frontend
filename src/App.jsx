@@ -27,7 +27,6 @@ import Blogs from './components/Blog/Blogs.jsx'
 import Blog from './components/Blog/Post.jsx'
 import ThemeProvider from './components/themeProvider'
 import UserOptions from './components/layout/UserOptions.jsx'
-import toast from 'react-hot-toast'
 
 
 
@@ -61,10 +60,6 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user, message } = useSelector(state => state.user)
 
-  useEffect(() => {
-    toast.success(message)
-    dispatch({type:"clearMessage"})
-  }, [message])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
