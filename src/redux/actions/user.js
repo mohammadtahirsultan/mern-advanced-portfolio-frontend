@@ -60,8 +60,6 @@ export const loginUser = (email, password) => async (dispatch) => {
 
 
 
-
-
 export const registerUser = (formData) => async (dispatch) => {
 
     try {
