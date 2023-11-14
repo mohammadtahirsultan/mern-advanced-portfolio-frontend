@@ -61,7 +61,7 @@ const HeaderWithRoutes = () => {
 
   useEffect(() => {
     dispatch(loadUser())
-  }, [message])
+  }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
