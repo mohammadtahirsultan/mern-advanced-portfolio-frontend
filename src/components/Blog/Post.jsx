@@ -128,16 +128,14 @@ function Blog() {
                             <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna.</p>
                             {/* ... Social Icons ... */}
                             <div className="flex items-center justify-center md:justify-start text-2xl no-underline pt-4">
-                                <a className="" href="#">
+                                <a className="" href="https://facebook.com/ghareebstar">
                                     <i className="fab fa-facebook"></i>
                                 </a>
-                                <a className="pl-4" href="#">
+                                <a className="pl-4" href="https://instagram.com/ghareebstar">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                                <a className="pl-4" href="#">
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                                <a className="pl-4" href="#">
+                               
+                                <a className="pl-4" href="https://linkedin.in/ghareebstar">
                                     <i className="fab fa-linkedin"></i>
                                 </a>
                             </div>
@@ -162,8 +160,8 @@ function Blog() {
                         <div className="grid grid-cols-3 gap-3">
                             {/* ... Instagram Images ... */}
                         </div>
-                        <a href="#" className="w-full font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-6">
-                            <i className="fab fa-instagram mr-2"></i> Follow @dgrzyb
+                        <a href="https://instagram.com/ghareebstar" className="w-full font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-6">
+                            <i className="fab fa-instagram mr-2"></i> Follow @ghareebstar
                         </a>
                     </div>
                 </aside>
