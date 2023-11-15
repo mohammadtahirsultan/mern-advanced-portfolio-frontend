@@ -31,7 +31,7 @@ const About = () => {
 
                             {/* First Column  */}
                             <div className='flex justify-center items-center flex-col gap-4'>
-                                <img className='rounded-full h-28' src="/logo.webp" alt="Mohammad Tahir" height={70} width={70} />
+                                <img className='h-36 w-auto' src="/logo.webp" alt="Mohammad Tahir" height={70} width={70} />
                                 <h2 className='text-2xl font-semibold'>Mohammad Tahir</h2>
                                 <p className='px-8 text-center'> <span className='font-semibold'>MERN Stack Developer</span> having more than 3 Years of Experience in developing large scale industry projects.Coding is my Passion and Football is my Hobby.</p>
                             </div>

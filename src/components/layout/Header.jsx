@@ -15,7 +15,7 @@ const Header = () => {
   return (
   //  <div className="h-[6rem] flex justify-between items-center w-screen px-20">
  <div>
-   <div className="h-[6.4rem] shadow-lg flex sticky top-0 w-full mb-8 z-50">
+   <div className="h-[6.4rem] shadow-lg flex sticky top-0 w-full z-50">
      <ReactNavbar
       navColor1={`${darkMode?"black":"white"}`}
       navColor2={"hsl(219, 410%, 10%)"}
