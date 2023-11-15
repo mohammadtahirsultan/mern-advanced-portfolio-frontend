@@ -29,7 +29,6 @@ const ProjectCard = () => {
 
                 <div className="flex flex-wrap -m-4">
 
-
                     {
                         loading ? <div className='flex w-full justify-center'><Loader /> </div> :
 
@@ -47,7 +46,7 @@ const ProjectCard = () => {
                                             <p className={`${darkMode && 'text-white'} leading-relaxed mb-3`}>{project.description}</p>
                                             <div className="flex items-center flex-wrap ">
 
-                                                <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-800'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
+                                                <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-700'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
                                                     <a target='blank' href={project.link}>See the Demo </a>
 
                                                 </button>
