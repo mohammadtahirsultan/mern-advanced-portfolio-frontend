@@ -170,28 +170,6 @@ function Blog() {
 
             </div>
 
-
-            <footer className="w-full border-t pb-12">
-                <div className="relative w-full flex items-center invisible md:visible md:pb-12">
-                    <button
-                        className="absolut  text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
-                    // onClick={decrement}
-                    >
-                        &#8592;
-                    </button>
-                    {/* {images && images.slice(currentIndex, currentIndex + 6).map((image, index) => (
-                        <img key={index} className="w-1/6 hover:opacity-75" src={image} alt={`Carousel Image ${index}`} />
-                    ))} */}
-                    <button
-                        className="absolute right-0  text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
-                        // onClick={increment}
-                    >
-                        &#8594;
-                    </button>
-                </div>
-
-
-            </footer>
         </div>
     );
 }
