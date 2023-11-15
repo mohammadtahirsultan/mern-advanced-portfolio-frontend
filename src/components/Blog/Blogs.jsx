@@ -54,9 +54,9 @@ const Blogs = () => {
       {/* Text Header */}
       <header className="w-full container mx-auto">
         <div className="flex flex-col items-center py-12">
-          <a className={`${darkMode && 'text-white'} font-bold text-gray-800 uppercase text-5xl`} href="#">
+          <h2 className={`${darkMode && 'text-white'} font-bold text-gray-800 uppercase text-5xl`}>
             Ghareebstar Blogs
-          </a>
+          </h2>
           <p className={`${darkMode && 'text-white'} text-lg`}>
             Lorem Ipsum Dolor Sit Amet
           </p>
