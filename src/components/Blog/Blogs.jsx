@@ -48,23 +48,23 @@ const Blogs = () => {
   }, [error])
 
   return (
-    <div className='bg-white'>
+    <div >
 
 
       {/* Text Header */}
       <header className="w-full container mx-auto">
         <div className="flex flex-col items-center py-12">
-          <a className="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+          <a className={`${darkMode && 'text-white'} font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl`} href="#">
             Ghareebstar Blogs
           </a>
-          <p className="text-lg text-gray-600">
+          <p className={`${darkMode && 'text-white'} text-lg text-gray-600`}>
             Lorem Ipsum Dolor Sit Amet
           </p>
         </div>
       </header>
 
       {/* Topic Nav */}
-      <nav className="w-full py-4 border-t border-b bg-gray-100" >
+      <nav className={"w-full py-4 border-t border-b"} >
         <div className="block sm:hidden">
           <a
             href="#"
@@ -76,28 +76,28 @@ const Blogs = () => {
         </div>
         <div className={`w-full ${open ? 'flex-grow sm:flex sm:items-center sm:w-auto' : 'block'}`}>
           <div className="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Technology</a>
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Automotive</a>
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Finance</a>
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Politics</a>
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Culture</a>
-            <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sports</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Technology</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Automotive</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Finance</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Politics</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Culture</a>
+            <a href="#" className={`${darkMode && 'hover:bg-gray-700'} hover:bg-gray-200 rounded py-2 px-6 mx-2`}>Sports</a>
           </div>
         </div>
       </nav>
 
       <div className="container mx-auto flex flex-wrap py-6 ">
+
         {/* Posts Section */}
 
 
         <section className="text-gray-600 body-font">
           <div className="container px-5 md:py-24 mx-auto">
 
-
             <div className="flex flex-wrap -m-4">
 
               {
-                loading ? <div className='flex w-full justify-center'><Loader /> </div> :
+                loading ? <div className='w-screen '><Loader /> </div> :
 
                   featuredProjects && featuredProjects.map((project) => (
                     <div className="p-4 md:w-1/3" key={project._id}>
@@ -133,7 +133,7 @@ const Blogs = () => {
           </div>
         </section>
 
-   
+
       </div>
 
       {/* Footer */}
@@ -156,7 +156,7 @@ const Blogs = () => {
           </button>
         </div>
 
-      
+
       </footer>
     </div>
   );
