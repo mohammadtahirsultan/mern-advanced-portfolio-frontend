@@ -137,7 +137,7 @@ const Blogs = () => {
       </div>
 
       {/* Footer */}
-      <footer className="w-full border-t bg-white pb-12">
+      <footer className="w-full border-t pb-12">
         <div className="relative w-full flex items-center invisible md:visible md:pb-12">
           <button
             className="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
