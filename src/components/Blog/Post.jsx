@@ -50,10 +50,10 @@ function Blog() {
             {/* ... Text Header ... */}
             <header className="w-full container mx-auto">
                 <div className="flex flex-col items-center py-12">
-                    <h2 className={`${darkMode && 'text-white'} font-bold text-gray-800 uppercase text-5xl`}>
+                    <h2 className={`${darkMode && ''} font-bold text-gray-800 uppercase text-5xl`}>
                         Ghareebstar Blogs
                     </h2>
-                    <p className={`${darkMode && 'text-white'} text-lg`}>
+                    <p className={`${darkMode && ''} text-lg`}>
                         Lorem Ipsum Dolor Sit Amet
                     </p>
                 </div>
@@ -151,7 +151,7 @@ function Blog() {
                     <div className="w-full shadow flex flex-col my-4 p-6">
                         <p className="text-xl font-semibold pb-5">About Us</p>
                         <p className="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est eu odio sagittis tristique. Vestibulum ut finibus leo. In hac habitasse platea dictumst.</p>
-                        <a href="#" className="w-full text-white font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-4">
+                        <a href="#" className="w-full  font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-4">
                             Get to know us
                         </a>
                     </div>
@@ -174,7 +174,7 @@ function Blog() {
             <footer className="w-full border-t pb-12">
                 <div className="relative w-full flex items-center invisible md:visible md:pb-12">
                     <button
-                        className="absolut text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
+                        className="absolut  text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
                     // onClick={decrement}
                     >
                         &#8592;
@@ -183,7 +183,7 @@ function Blog() {
                         <img key={index} className="w-1/6 hover:opacity-75" src={image} alt={`Carousel Image ${index}`} />
                     ))} */}
                     <button
-                        className="absolute right-0 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
+                        className="absolute right-0  text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
                         // onClick={increment}
                     >
                         &#8594;
