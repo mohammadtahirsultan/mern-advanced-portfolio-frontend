@@ -27,6 +27,7 @@ import Blogs from './components/Blog/Blogs.jsx'
 import Blog from './components/Blog/Post.jsx'
 import ThemeProvider from './components/themeProvider'
 import UserOptions from './components/layout/UserOptions.jsx'
+import ParticleComponent from './components/layout/Particles.jsx'
 
 
 
@@ -75,6 +76,8 @@ const HeaderWithRoutes = () => {
 
       {showHeader && <Header />}
       {user && isAuthenticated && <UserOptions user={user} />}
+      <ParticleComponent />
+
       <Routes>
 
 

@@ -6,6 +6,8 @@ import ServicesCard from '../ServicesCard'
 import IndustryExperince from '../IndustryExperince'
 
 const Home = () => {
+  
+ 
   return (
     <>
       <HeroSection />
