@@ -34,8 +34,6 @@ const Testimonials = () => {
         setIsOpen(!isOpen)
     }
 
-    const { darkMode } = useSelector((state) => state.theme);
-
     return (
         <section className="body-font max-w-[100vw] ">
             <div className="container md:px-5 md:py-16 mx-auto md:max-w-full max-w-[100vw]">
