@@ -31,7 +31,7 @@ const Categories = () => {
             <Link to={"/dashboard/category/add"}>Add New Category</Link>
           </button>
           <div className="flex flex-col text-center w-full mb-8">
-            <h1 className={`${categories?.length < 1 ? 'hidden' : "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"} `}>
+            <h1 className={`${categories?.length < 1 ? 'hidden' : "sm:text-4xl text-3xl font-medium title-font mb-2"} `}>
               Categories
             </h1>
           </div>
@@ -43,22 +43,22 @@ const Categories = () => {
             <table className={`${categories?.length < 1 ? 'hidden' : 'table-auto w-full text-left whitespace-no-wrap'}`}>
               <thead>
                 <tr>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
                     Category
                   </th>
-                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
                     Created At
                   </th> */}
-                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
                     Category
                   </th>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
                     Author
                   </th> */}
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
                     Edit
                   </th>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
                     <p className="pl-10">Delete</p>
                   </th>
                 </tr>
@@ -78,17 +78,17 @@ const Categories = () => {
                             {category?.createdAt?.slice(0, 10)}
                           </td>
                           <td className="px-4 py-3">{category?.category}</td>
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg">
                             {category?.author}
                           </td> */}
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg">
                             <button className="bg-black hover:bg-gray-700 text-white w-2/4 py-0.5 rounded-md px-3">
                               <Link to={`/dashboard/category/edit/${category?._id}`}>
                                 Edit
                               </Link>
                             </button>
                           </td>
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg">
                             <button
                               className="bg-red-500 hover:bg-red-600 text-white w-2/4 py-0.5 rounded-md"
                               onClick={() => deletecategoryHandle(category?._id)}

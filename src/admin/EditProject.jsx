@@ -77,38 +77,38 @@ const EditProject = () => {
             <div className="flex min-h-full container flex-col justify-center px-6 py-8 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img className="mx-auto h-6 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-                    <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">Update Project </h2>
+                    <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight">Update Project </h2>
                 </div>
 
                 <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form onSubmit={updateProjectSubmit} className="space-y-1" encType="multipart/form-data">
                         <div>
-                            <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">Title</label>
+                            <label htmlFor="title" className="block text-sm font-medium leading-6">Title</label>
                             <div className="mt-1">
-                                <input required value={title} type="text" name='title' onChange={(e) => setTitle(e.target.value)} autoComplete="title" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
+                                <input required value={title} type="text" name='title' onChange={(e) => setTitle(e.target.value)} autoComplete="title" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
                             </div>
                         </div>
 
                         <div>
-                            <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">Description</label>
+                            <label htmlFor="description" className="block text-sm font-medium leading-6">Description</label>
                             <div className="mt-1">
-                                <input required value={description} name='description' onChange={(e) => setDescription(e.target.value)} type="text" autoComplete="description" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
+                                <input required value={description} name='description' onChange={(e) => setDescription(e.target.value)} type="text" autoComplete="description" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
                             </div>
                         </div>
                         <div>
-                            <label htmlFor="category" className="block text-sm font-medium leading-6 text-gray-900">Category</label>
+                            <label htmlFor="category" className="block text-sm font-medium leading-6">Category</label>
                             <div className="mt-1">
-                                <input required value={category} name='category' onChange={(e) => setCategory(e.target.value)} type="text" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
+                                <input required value={category} name='category' onChange={(e) => setCategory(e.target.value)} type="text" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2" />
                             </div>
                         </div>
 
                         <div>
                             <div className="flex items-center justify-between">
-                                <label htmlFor="link" className="block text-sm font-medium leading-6 text-gray-900" autoComplete="link" >Link</label>
+                                <label htmlFor="link" className="block text-sm font-medium leading-6" autoComplete="link" >Link</label>
 
                             </div>
                             <div className="mt-1">
-                                <input required value={link} onChange={(e) => setLink(e.target.value)} type="text" name='link' autoComplete="link" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-text-gray-800sm:text-sm sm:leading-6 px-2" />
+                                <input required value={link} onChange={(e) => setLink(e.target.value)} type="text" name='link' autoComplete="link" className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-text-gray-800sm:text-sm sm:leading-6 px-2" />
                             </div>
                         </div>
 
@@ -118,7 +118,7 @@ const EditProject = () => {
 
 
                         <div className='pb-2'>
-                            <label htmlFor="image" className="block text-sm font-medium leading-6 text-gray-900">Image</label>
+                            <label htmlFor="image" className="block text-sm font-medium leading-6">Image</label>
                             <div className="mt-1 pb-1">
 
                                 <input
@@ -127,7 +127,7 @@ const EditProject = () => {
                                     accept="image/*"
 
                                     onChange={imageUploadChange}
-                                    className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4"
+                                    className="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4"
                                     type="file"
 
                                 />

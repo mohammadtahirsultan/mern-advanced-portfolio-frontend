@@ -49,7 +49,7 @@ const EditCategory = () => {
             <div className="flex min-h-full container flex-col justify-center px-6 py-8 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 
-                    <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">
+                    <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight">
                         Update Category
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ const EditCategory = () => {
                         <div>
                             <label
                                 htmlFor="category"
-                                className="block text-sm font-medium leading-6 text-gray-900"
+                                className="block text-sm font-medium leading-6"
                             >
                                 Category
                             </label>
@@ -74,7 +74,7 @@ const EditCategory = () => {
                                     name="category"
                                     onChange={(e) => setCategory(e.target.value)}
                                     autoComplete="category"
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                                    className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                                 />
                             </div>
                         </div>

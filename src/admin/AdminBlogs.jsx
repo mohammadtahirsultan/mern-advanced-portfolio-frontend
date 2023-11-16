@@ -26,7 +26,7 @@ const AdminProjects = () => {
             <Link to={"/dashboard/blog/create"}>Add New Blog</Link>
           </button>
           <div className="flex flex-col text-center w-full mb-8">
-            <h1 className={`${blogs?.length < 1 ? 'hidden' : '' } sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900`}>
+            <h1 className={`${blogs?.length < 1 ? 'hidden' : '' } sm:text-4xl text-3xl font-medium title-font mb-2 `}>
               Blogs
             </h1>
           </div>
@@ -37,22 +37,22 @@ const AdminProjects = () => {
                 // !blogs === "undefined" ? "" :
                 <thead className={`${blogs?.length < 1 ? 'hidden' : ''}`}>
                   <tr>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
                       Title
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
                       Created At
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
                       Category
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
                       Author
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
                       Edit
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
                       Delete
                     </th>
                   </tr>
@@ -73,17 +73,17 @@ const AdminProjects = () => {
                             {blog?.createdAt?.slice(0, 10)}
                           </td>
                           <td className="px-4 py-3">{blog?.category?.category}</td>
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg ">
                             {blog?.author}
                           </td>
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg ">
                             <button className="bg-black hover:bg-gray-700 text-white w-full py-0.5 rounded-md px-3">
                               <Link to={`/dashboard/blog/edit/${blog?._id}`}>
                                 Edit
                               </Link>
                             </button>
                           </td>
-                          <td className="px-4 py-3 text-lg text-gray-900">
+                          <td className="px-4 py-3 text-lg ">
                             <button
                               className="bg-red-500 hover:bg-red-600 text-white w-full py-0.5 rounded-md"
                               onClick={() => deleteProjectHandle(blog?._id)}

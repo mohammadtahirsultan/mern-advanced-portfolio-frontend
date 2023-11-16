@@ -45,7 +45,7 @@ const AddCategory = () => {
             src="../../public/favicon.png"
             alt="Your Company"
           /> */}
-          <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">
+          <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight">
             Add Category{" "}
           </h2>
         </div>
@@ -59,7 +59,7 @@ const AddCategory = () => {
             <div>
               <label
                 htmlFor="category"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 Category
               </label>
@@ -71,7 +71,7 @@ const AddCategory = () => {
                   onChange={(e) => setCategory(e.target.value)}
                   autoComplete="category"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                  className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                 />
               </div>
             </div>

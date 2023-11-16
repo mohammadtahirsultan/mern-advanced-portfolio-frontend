@@ -67,7 +67,7 @@ const AddBlog = () => {
             src="../../public/favicon.png"
             alt="Your Company"
           /> */}
-          <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight text-gray-900">
+          <h2 className="mt-4 text-center text-2xl font-bold leading-4 tracking-tight ">
             Add Blog{" "}
           </h2>
         </div>
@@ -81,7 +81,7 @@ const AddBlog = () => {
             <div>
               <label
                 htmlFor="title"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Title
               </label>
@@ -93,7 +93,7 @@ const AddBlog = () => {
                   onChange={(e) => setTitle(e.target.value)}
                   autoComplete="title"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                  className="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                 />
               </div>
             </div>
@@ -101,7 +101,7 @@ const AddBlog = () => {
             <div>
               <label
                 htmlFor="shortDescription"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Short Description
               </label>
@@ -112,7 +112,7 @@ const AddBlog = () => {
                   name="shortDescription"
                   onChange={(e) => setShortDescription(e.target.value)}
                   autoComplete="shortDescription"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                  className="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 f focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                 />
               </div>
             </div>
@@ -120,7 +120,7 @@ const AddBlog = () => {
             <div>
               <label
                 htmlFor="content"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Content
               </label>
@@ -141,14 +141,14 @@ const AddBlog = () => {
                   autoComplete="content"
                   required
                   ref={editorRef}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                  className="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                 ></textarea> */}
               </div>
             </div>
             <div>
               {/* <label
                 htmlFor="category"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Category
               </label> */}
@@ -160,7 +160,7 @@ const AddBlog = () => {
                   type="text"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
+                  className="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-grey-600 sm:text-sm sm:leading-6 px-2"
                 /> */}
                 <select
                   name="category"
@@ -182,7 +182,7 @@ const AddBlog = () => {
             <div className="pb-2">
               <label
                 htmlFor="image"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 "
               >
                 Image
               </label>
@@ -192,7 +192,7 @@ const AddBlog = () => {
                   accept="image/*"
                   //   required
                   onChange={imageUploadChange}
-                  className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4 "
+                  className="block w-full text-sm  border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 shadow-lg p-4 "
                   type="file"
                 />
               </div>
