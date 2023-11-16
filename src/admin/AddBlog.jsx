@@ -55,9 +55,7 @@ const AddBlog = () => {
     navigate("/dashboard/blogs");
   };
 
-  useEffect(() => {
-    // getAllCategories()
-  }, []);
+
   return (
     <div className="flex">
       <Sidebar />
