@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProjects } from '../../redux/actions/project';
 import Loader from '../Loader';
+import { getAllBlogs } from '../../redux/actions/blog';
 
 const Blogs = () => {
+  
   const getCarouselData = () => {
 
 
@@ -36,6 +38,7 @@ const Blogs = () => {
 
   const dispatch = useDispatch()
   const { loading, error, featuredProjects } = useSelector(state => state.project)
+  const {  blogs } = useSelector(state => state.testimonial)
   const { darkMode } = useSelector((state) => state.theme);
 
   useEffect(() => {
@@ -44,8 +47,10 @@ const Blogs = () => {
       dispatch({ type: "clearError" })
     }
 
+    dispatch(getAllBlogs())
     dispatch(getAllProjects())
   }, [error])
+  console.log(blogs);
 
   return (
     <div >
