@@ -38,7 +38,7 @@ const Blogs = () => {
 
   const dispatch = useDispatch()
   const { loading, error, featuredProjects } = useSelector(state => state.project)
-  const {  blogs } = useSelector(state => state.testimonial)
+  const {  blogs } = useSelector(state => state.blogs)
   const { darkMode } = useSelector((state) => state.theme);
 
   useEffect(() => {
