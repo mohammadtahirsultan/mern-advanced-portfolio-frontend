@@ -8,7 +8,7 @@ const Hompage = () => {
                     <div className="text-sm font-medium truncate">
                         Total users
                     </div>
-                    <div className="mt-1 text-3xl font-semibold text-gray-900">
+                    <div className="mt-1 text-3xl font-semibold">
                         12,00
                     </div>
                 </div>
@@ -16,7 +16,7 @@ const Hompage = () => {
                     <div className="text-sm font-medium truncate">
                         Total Profit
                     </div>
-                    <div className="mt-1 text-3xl font-semibold text-gray-900">
+                    <div className="mt-1 text-3xl font-semibold">
                         $ 450k
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const Hompage = () => {
                     <div className="text-sm font-medium truncate">
                         Total Orders
                     </div>
-                    <div className="mt-1 text-3xl font-semibold text-gray-900">
+                    <div className="mt-1 text-3xl font-semibold">
                         20k
                     </div>
                 </div>

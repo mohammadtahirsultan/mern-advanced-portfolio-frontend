@@ -40,7 +40,7 @@ const Testimonials = () => {
         <div className='flex'>
             <Sidebar />
 
-            <section className="text-gray-600 body-font container">
+            <section className=" body-font container">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-8">
                         <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2">Ghareebstar Testimonials</h1>
@@ -51,11 +51,11 @@ const Testimonials = () => {
                             <thead>
                                 <tr>
 
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">Name</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">Email</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Description</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Approve</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Delete</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg  rounded-tl rounded-bl">Name</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg  rounded-tl rounded-bl">Email</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Description</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Approve</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Delete</th>
 
 
                                 </tr>

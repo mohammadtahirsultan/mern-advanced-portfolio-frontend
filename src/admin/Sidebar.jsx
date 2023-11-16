@@ -140,7 +140,7 @@ const Sidebar = () => {
                                     {
                                         darkMode ? <img className={`${darkMode && 'transition ease-in-out delay-[700ms] hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8 transition ease-in-out delay-[700ms]' src="/sun.webp" alt="moon" />
                                     }
-                                    <span>Toggle</span>
+                                  
                                 </Link>
                             </li>
 
