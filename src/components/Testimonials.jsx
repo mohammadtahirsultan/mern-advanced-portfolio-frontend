@@ -62,7 +62,6 @@ const Testimonials = () => {
                                 }
 
 
-
                                 <div className="flex justify-center w-full max-w-[100vw]">
                                     <div className="md:max-w-5xl">
 
@@ -76,7 +75,7 @@ const Testimonials = () => {
                                                 {
                                                     approvedTestimonials && approvedTestimonials.map((testimonial) =>
                                                     (
-                                                        <div className="md:flex md:flex-row flex-col" key={testimonial?._id}>
+                                                        <div className="md:flex md:flex-row flex-col" key={testimonial._id}>
 
                                                             <div
                                                                 className="md:w-1/3  mx-auto md:mx-0 md:mb-0 mb-4">
@@ -91,15 +90,15 @@ const Testimonials = () => {
                                                             <div className="md:ml-4 md:mt-0 text-center md:text-center md:w-2/3">
                                                                 <p
                                                                     className="mb-4 font-light">
-                                                                    {testimonial?.description}
+                                                                    {testimonial.description}
                                                                 </p>
                                                                 <p
                                                                     className="mb-1 text-xl font-semibold">
-                                                                    {testimonial?.user?.name}
+                                                                    {testimonial.user.name}
                                                                 </p>
                                                                 <p
                                                                     className="mb-0 font-semibold">
-                                                                    {testimonial?.user?.role}
+                                                                    {testimonial.user.role}
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -116,6 +115,7 @@ const Testimonials = () => {
                                         </div>
                                     </div>
                                 </div>
+
 
 
                             </section>
