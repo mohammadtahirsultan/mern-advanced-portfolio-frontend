@@ -71,7 +71,7 @@ const HeaderWithRoutes = () => {
   return (
 
 
-    <div className={` ${darkMode ? `dark:bg-gray-800 dark:text-white` : `bg-white`}`}>
+    <div className={` ${darkMode ? `dark:bg-gradient-to-r from-[#000428] to-[#004e92] dark:text-white` : `bg-white`}`}>
 
 
       {showHeader && <Header />}
