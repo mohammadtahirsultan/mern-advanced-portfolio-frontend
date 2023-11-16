@@ -28,7 +28,7 @@ const ParticleComponent = () => {
         loaded={particlesLoaded}
         options={{
 
-          fpsLimit: 120,
+          fpsLimit: 320,
           interactivity: {
             events: {
               onClick: {
@@ -43,21 +43,21 @@ const ParticleComponent = () => {
             },
             modes: {
               push: {
-                quantity: 4,
+                quantity: 2,
               },
               repulse: {
                 distance: 100,
-                duration: .4,
+                duration: .7,
               },
             },
           },
           particles: {
             color: {
-              value: "#FF0000",
+              value: darkMode ? "#4b63c2" : "#004e60",
             },
             links: {
-              color: "#E34234",
-              distance: 150,
+              color: darkMode ? "#4b63c2" : "#004e92",
+              distance: 100,
               enable: true,
               opacity: 0.5,
               width: 1,
