@@ -56,9 +56,7 @@ const App = () => {
 
 export default App
 
-
 const HeaderWithRoutes = () => {
-
 
   const { darkMode } = useSelector((state) => state.theme);
 
