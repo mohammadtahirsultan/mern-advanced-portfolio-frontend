@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 
     const [email, setEmail] = useState("")
 
-    const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isEmailValid = (email) => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d ]{8,}$/.test(email);
 
     const dispatch = useDispatch()
 
