@@ -74,9 +74,9 @@ const Testimonials = () => {
 
                                                 {/* Testimonials */}
                                                 {
-                                                    approvedTestimonials && approvedTestimonials.map((testimonial) =>
+                                                    approvedTestimonials > 0 && approvedTestimonials.map((testimonial) =>
                                                     (
-                                                        <div className="md:flex md:flex-row flex-col" key={testimonial._id}>
+                                                        <div className="md:flex md:flex-row flex-col" key={testimonial?._id}>
 
                                                             <div
                                                                 className="md:w-1/3  mx-auto md:mx-0 md:mb-0 mb-4">
@@ -91,7 +91,7 @@ const Testimonials = () => {
                                                             <div className="md:ml-4 md:mt-0 text-center md:text-center md:w-2/3">
                                                                 <p
                                                                     className="mb-4 font-light">
-                                                                    {testimonial.description}
+                                                                    {testimonial?.description}
                                                                 </p>
                                                                 <p
                                                                     className="mb-1 text-xl font-semibold">
