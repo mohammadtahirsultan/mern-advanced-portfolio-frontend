@@ -49,12 +49,12 @@ const AdminProjects = () => {
                         <table className="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                                 <tr>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">Title</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Created At</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Category</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">URL</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Edit</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Delete</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg  rounded-tl rounded-bl">Title</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Created At</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Category</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">URL</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Edit</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Delete</th>
 
 
                                 </tr>
