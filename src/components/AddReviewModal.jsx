@@ -6,7 +6,7 @@ import { addReview } from '../redux/actions/testimonial'
 import { useNavigate } from 'react-router-dom'
 
 export default function AddReview() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     const [description, setDescription] = useState("")
 
     const cancelButtonRef = useRef(null)

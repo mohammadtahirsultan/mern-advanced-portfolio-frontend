@@ -14,7 +14,6 @@ const Testimonials = () => {
     const { loading, error, approvedTestimonials, message } = useSelector(state => state.testimonial)
     const { isAuthenticated } = useSelector(state => state.user)
 
-    console.log(approvedTestimonials);
     useEffect(() => {
         // if (error) {
         //     toast.error(error)
@@ -26,9 +25,10 @@ const Testimonials = () => {
         // }
 
         dispatch(getAllTestimonials())
+        setIsOpen(!isOpen)
     }, [error, message])
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
     const handleReview = () => {
         setIsOpen(!isOpen)
