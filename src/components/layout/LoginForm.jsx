@@ -80,7 +80,7 @@ const LoginForm = () => {
                         <div className="flex items-center justify-between">
                             <label htmlFor="password" className={`block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`}>Password</label>
                             <div className="text-sm">
-                                <Link to={"/forgotpassword"} className={`font-semibold text-gray-800 hover:text-gray-500 ${darkMode && "text-white"}`}>Forgot password?</Link>
+                                <Link to={"/forgotpassword"} className={`font-semibold hover:font-bold`}>Forgot password?</Link>
                             </div>
                         </div>
                         <div className="mt-2 ">
@@ -95,9 +95,9 @@ const LoginForm = () => {
                     </div>
                 </form>
 
-                <p className="mt-10 text-center text-sm text-gray-500">
+                <p className="mt-10 text-center text-sm ">
                     Not a member?
-                    <Link to={"/register"} className={`font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1 ${darkMode && "text-white"}`}>Register Here</Link>
+                    <Link to={"/register"} className={`font-semibold leading-6 hover:ml-2 ml-1 `}>Register Here</Link>
                 </p>
             </div>
         </div>

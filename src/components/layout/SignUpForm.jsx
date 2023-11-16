@@ -147,7 +147,7 @@ const SignUpForm = () => {
 
                     <div>
                         <div className="flex flex-col  ">
-                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} >Password <span className='text-xs text-red-600 font-extralight'>Special Characters Not Allowed</span> </label>
+                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} >Password <span className='text-xs text-red-600 font-base'>Special Characters Not Allowed</span> </label>
                             <label htmlFor="password" className={`inline text-xs mt-1 mb-2 leading-6 text-red-600 ${darkMode && "text-white"}`} >At least 8 Chracters with 1-Digit, 1-Lowercase & 1-Uppercase Letter</label>
 
                         </div>
@@ -185,9 +185,9 @@ const SignUpForm = () => {
                     </div>
                 </form>
 
-                <p className="mt-10 text-center text-sm text-gray-500">
+                <p className="mt-10 text-center text-sm">
                     Already Have an Account?
-                    <Link to={"/login"} className={`font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1 ${darkMode && "text-white "}`}>Login Here</Link>
+                    <Link to={"/login"} className={`font-semibold leading-6 hover:ml-2 ml-1`}>Login Here</Link>
                 </p>
             </div>
         </div>

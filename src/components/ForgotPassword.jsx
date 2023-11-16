@@ -34,7 +34,7 @@ const ForgotPassword = () => {
     }, [message, error, dispatch])
 
     return (
-        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="flex min-h-[74vh] overflow-hidden flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img className="mx-auto h-28 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Forgot Password</h2>
@@ -57,9 +57,9 @@ const ForgotPassword = () => {
                     </div>
                 </form>
 
-                <p className="mt-10 text-center text-sm text-gray-500">
+                <p className="mt-10 text-center text-sm">
                     Remember the Password?
-                    <Link to={"/login"} className="font-semibold leading-6 text-gray-900 hover:text-gray-500 ml-1">Login Here</Link>
+                    <Link to={"/login"} className="font-semibold leading-6 hover:ml-2 ml-1">Login Here</Link>
                 </p>
             </div>
         </div>
