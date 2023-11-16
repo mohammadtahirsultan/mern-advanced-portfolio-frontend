@@ -26,7 +26,7 @@ const IndustryExperince = () => {
 
 
   const animateYearCount = () => {
-    animate(0, 5, {
+    animate(0, 3, {
       duration: 2,
       onUpdate: (v) => YearCount.current.textContent = v.toFixed()
     })

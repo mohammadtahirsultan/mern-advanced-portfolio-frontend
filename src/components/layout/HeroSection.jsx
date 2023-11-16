@@ -8,7 +8,7 @@ const HeroSection = () => {
     const { darkMode } = useSelector((state) => state.theme);
 
     return (
-        <section className="text-gray-600 body-font">
+        <section className="body-font">
             <div className="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <h1 className={`${darkMode && `text-white`} title-font sm:text-4xl md:text-3xl mb-4 font-medium text-xl text-gray-900 flex gap-2`}
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
 
                     </h1>
-                    <p className={`${darkMode ? 'text-white mb-8 leading-relaxed' : ' mb-8 leading-relaxed'}`}
+                    <p className="mb-8 leading-relaxed"
                     >Ghareeb Star Blog, Your Source for Programming Insights and Web Development Wonders!❤😎
                         Explore the fusion of programming brilliance and web development artistry at Ghareeb Star Blog. Join me in unraveling the complexities of coding, discovering valuable tips, and diving into the realm of crafting captivating websites. Delve into my web development projects, where innovation knows no bounds. Let's embark on this digital adventure together.</p>
                     <div className="flex justify-center">
