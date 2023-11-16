@@ -18,7 +18,6 @@ export const addCategory = (category) => async (dispatch) => {
 
 
 
-
         const { data } = await axios.post(
             `${server}/category/create`,
             category,
