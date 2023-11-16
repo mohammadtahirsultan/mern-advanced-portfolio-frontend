@@ -3,6 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-hot-toast'
 import { addReview } from '../redux/actions/testimonial'
+import { useNavigate } from 'react-router-dom'
 
 export default function AddReview() {
     const [open, setOpen] = useState(true)
@@ -27,9 +28,11 @@ export default function AddReview() {
 
     }, [error, message])
 
+    const navigate = useNavigate()
     const handleReview = async () => {
         if (description === "") return toast.error("Please Add Review")
         await dispatch(addReview(description))
+        navigate("/")
     }
 
     return (
