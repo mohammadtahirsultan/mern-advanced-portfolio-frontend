@@ -33,6 +33,8 @@ export default function AddReview() {
         if (description === "") return toast.error("Please Add Review")
         await dispatch(addReview(description))
         navigate("/")
+        // setOpen(true)
+        return null
     }
 
     return (
