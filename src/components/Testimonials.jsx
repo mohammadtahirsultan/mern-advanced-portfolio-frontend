@@ -14,7 +14,7 @@ const Testimonials = () => {
     const { loading, error, approvedTestimonials, message } = useSelector(state => state.testimonial)
     const { isAuthenticated } = useSelector(state => state.user)
 
-
+    console.log(approvedTestimonials);
     useEffect(() => {
         if (error) {
             toast.error(error)
