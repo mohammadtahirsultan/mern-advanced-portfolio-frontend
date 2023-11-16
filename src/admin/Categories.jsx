@@ -43,22 +43,22 @@ const Categories = () => {
             <table className={`${categories?.length < 1 ? 'hidden' : 'table-auto w-full text-left whitespace-no-wrap'}`}>
               <thead>
                 <tr>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg  rounded-tl rounded-bl">
                     Category
                   </th>
-                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
+                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">
                     Created At
                   </th> */}
-                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
+                  {/* <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">
                     Category
                   </th>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">
                     Author
                   </th> */}
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">
                     Edit
                   </th>
-                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">
+                  <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">
                     <p className="pl-10">Delete</p>
                   </th>
                 </tr>
