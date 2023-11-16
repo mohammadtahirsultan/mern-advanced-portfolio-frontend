@@ -54,7 +54,7 @@ const Testimonials = () => {
                             >
 
                                 {
-                                    isAuthenticated ? <button className='bg-white hover:bg-gray-200 px-6 rounded-sm py-2 mb-4  ml-8 ' onClick={handleReview}>Add Review</button> : <button className='bg-white px-6 rounded-sm py-2 mb-4 md:mb-2 hover:bg-gray-200 ml-8'>
+                                    isAuthenticated ? <button className=' px-6 rounded-sm py-2 mb-4  ml-8 ' onClick={handleReview}>Add Review</button> : <button className='px-6 rounded-sm py-2 mb-4 md:mb-2 ml-8'>
                                         <Link to="/login">Login to Submit Review</Link>
                                     </button>
                                 }
