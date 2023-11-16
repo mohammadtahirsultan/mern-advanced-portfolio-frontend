@@ -35,13 +35,13 @@ const AdminProjects = () => {
         <div className='flex '>
             <Sidebar />
 
-            <section className="text-gray-600 body-font flex-grow ">
+            <section className="body-font flex-grow ">
                 <div className=" px-1 py-10 mx-auto">
                     <button className="flex ml-8 text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 rounded">
                         <Link to={"/dashboard/addprojects"}>Add New Projects</Link>
                     </button>
                     <div className="flex flex-col text-center w-full mb-8">
-                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Projects</h1>
+                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2">Projects</h1>
 
                     </div>
 
@@ -49,12 +49,12 @@ const AdminProjects = () => {
                         <table className="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                                 <tr>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">Title</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">Created At</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">Category</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">URL</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">Edit</th>
-                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm md:text-lg bg-gray-100">Delete</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">Title</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Created At</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Category</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">URL</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Edit</th>
+                                    <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg bg-gray-100">Delete</th>
 
 
                                 </tr>
