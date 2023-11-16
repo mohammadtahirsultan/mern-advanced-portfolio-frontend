@@ -11,7 +11,7 @@ const EditCategory = () => {
 
     const { loading, message, error, category: categoryToBeEdit } = useSelector((state) => state.category);
 
-    const [category, setCategory] = useState(categoryToBeEdit);
+    const [category, setCategory] = useState(categoryToBeEdit?.category);
 
     const navigate = useNavigate();
 
