@@ -52,7 +52,7 @@ const AddBlog = () => {
     setImage("");
     setCategory("")
 
-    navigate("/");
+    navigate("/dashboard/blogs");
   };
 
   useEffect(() => {
