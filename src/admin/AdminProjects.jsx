@@ -45,7 +45,7 @@ const AdminProjects = () => {
 
                     </div>
 
-                    <div className="lg:px-2 w-full overflow-auto">
+                    <div className="lg:px-2 w-full overflow-hidden">
                         <table className="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                                 <tr>
