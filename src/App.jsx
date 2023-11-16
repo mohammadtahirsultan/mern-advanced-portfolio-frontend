@@ -116,10 +116,10 @@ const HeaderWithRoutes = () => {
 
 
         {/* Admin Routes  */}
-{/* 
+
         {
           user && isAuthenticated && user?.role === "admin" &&
-          < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}> */}
+          < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}>
 
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/dashboard/projects' element={<AdminProjects />} />
@@ -135,9 +135,9 @@ const HeaderWithRoutes = () => {
             <Route path='/dashboard/users' element={<Users />} />
             <Route path='/dashboard/user/:id' element={<UpdateRole />} />
 
-          {/* </Route>
+          </Route>
 
-        } */}
+        }
 
         <Route path='*' element={<PageNotFound />} />
 
