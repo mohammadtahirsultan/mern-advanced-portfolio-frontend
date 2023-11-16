@@ -21,7 +21,7 @@ const AddCategory = () => {
 
     await dispatch(addCategory(category));
 
-    navigate("/category");
+    navigate("/dashboard/categories");
   };
 
   useEffect(() => {
