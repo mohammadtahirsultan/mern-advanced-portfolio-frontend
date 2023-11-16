@@ -28,7 +28,7 @@ const Categories = () => {
       <section className="text-gray-600 body-font flex-grow ">
         <div className=" px-1 py-10 mx-auto">
           <button className="flex ml-8 text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-gray-800 rounded">
-            <Link to={"/dashboard/category/create"}>Add New Category</Link>
+            <Link to={"/dashboard/category/add"}>Add New Category</Link>
           </button>
           <div className="flex flex-col text-center w-full mb-8">
             <h1 className={`${categories?.length < 1 ? 'hidden' : "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"} `}>
@@ -83,7 +83,7 @@ const Categories = () => {
                           </td> */}
                           <td className="px-4 py-3 text-lg text-gray-900">
                             <button className="bg-black hover:bg-gray-700 text-white w-2/4 py-0.5 rounded-md px-3">
-                              <Link to={`/dashboard/category/${category?._id}`}>
+                              <Link to={`/dashboard/category/edit/${category?._id}`}>
                                 Edit
                               </Link>
                             </button>
