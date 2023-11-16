@@ -49,7 +49,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     <Home className='h-6 w-6' />
-                                    {/* <img src="/home.png" alt="home" className='h-6 w-6' /> */}
                                     <span>Home</span>
                                 </Link>
                             </li>
@@ -59,7 +58,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
                                     <Assignment className='h-6 w-6' />
 
                                     <span>Projects</span>
@@ -71,7 +69,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
                                     <BorderColor className='h-6 w-6' />
 
                                     <span>Blogs</span>
@@ -83,7 +80,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
                                     <Category className='h-6 w-6' />
 
                                     <span>Categories</span>
@@ -95,7 +91,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    {/* <img src="/users.png" alt="users" className='h-6 w-6' /> */}
                                     <People className='h-6 w-6' />
 
                                     <span>Users</span>
@@ -107,7 +102,6 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    {/* <img src="/testimonials.png" alt="testimonials" className='h-6 w-6' /> */}
                                     <Chat className='h-6 w-6' />
 
 
@@ -123,7 +117,6 @@ const Sidebar = () => {
                                 >
 
 
-                                    {/* <img src="/web.png" alt="back-to-website" className='h-6 w-6' /> */}
                                     <Language className='h-6 w-6' />
 
 
@@ -147,6 +140,7 @@ const Sidebar = () => {
                                     {
                                         darkMode ? <img className={`${darkMode && 'transition ease-in-out delay-[700ms] hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8 transition ease-in-out delay-[700ms]' src="/sun.webp" alt="moon" />
                                     }
+                                    <span>Theme Toggle</span>
                                 </Link>
                             </li>
 
