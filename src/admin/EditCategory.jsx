@@ -5,7 +5,7 @@ import Loader from "../components/Loader";
 import Sidebar from "./Sidebar";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
-import { editCategory, getAllCategories, getCategory } from "../redux/actions/category";
+import { editCategory, getCategory } from "../redux/actions/category";
 
 const EditCategory = () => {
 
@@ -42,9 +42,6 @@ const EditCategory = () => {
         }
     }, [message, error])
 
-    useEffect(() => {
-        getAllCategories()
-    }, []);
     return (
         <div className="flex">
             <Sidebar />
