@@ -30,7 +30,7 @@ const Profile = () => {
 
     return (
         <div
-            className="max-w-2xl mx-4 sm:max-w-sm md:max-w-2xl lg:max-w-2xl xl:max-w-4xl sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto h-[50vh] md:h-[65vh] mt-16 bg-white shadow-xl rounded-lg text-gray-900">
+            className="max-w-2xl mx-4 sm:max-w-sm md:max-w-2xl lg:max-w-2xl xl:max-w-4xl sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto h-[50vh] md:h-[65vh] mt-16 shadow-xl rounded-lg text-gray-900">
             <div className="rounded-t-lg h-32 overflow-hidden">
                 <img className="object-cover object-top w-full" src='https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt={`${user?.name}'s Profile`} />
             </div>
