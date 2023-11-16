@@ -25,7 +25,6 @@ const Testimonials = () => {
         // }
 
         dispatch(getAllTestimonials())
-        setIsOpen(!isOpen)
     }, [error, message])
 
     const [isOpen, setIsOpen] = useState(false)
