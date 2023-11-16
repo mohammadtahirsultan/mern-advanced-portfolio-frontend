@@ -28,7 +28,7 @@ const Testimonials = () => {
         dispatch(getAllTestimonials())
     }, [error, message])
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const handleReview = () => {
         setIsOpen(!isOpen)
