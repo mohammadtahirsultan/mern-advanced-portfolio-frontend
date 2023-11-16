@@ -57,7 +57,7 @@ const Testimonials = () => {
                                 }
 
                                 {
-                                    isOpen && <AddReview onClose={() => setIsOpen(false)} />
+                                    isOpen && <AddReview onClose={() => setIsOpen(!isOpen)} />
                                 }
 
 
