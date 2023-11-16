@@ -20,7 +20,7 @@ const AddCategory = () => {
     e.preventDefault();
 
     await dispatch(addCategory(category));
-
+    console.log("main hoon don", category);
     navigate("/dashboard/categories");
   };
 
@@ -33,7 +33,7 @@ const AddCategory = () => {
       toast.error(error);
       dispatch({ type: "clearError" });
     }
-  }, [message,error])
+  }, [message, error])
   return (
     <div className="flex">
       <Sidebar />
@@ -78,7 +78,7 @@ const AddCategory = () => {
 
             <div>
               {loading ? (
-               <div className="mt-10"> <Loader /></div>
+                <div className="mt-10"> <Loader /></div>
               ) : (
                 <button
                   type="submit"
