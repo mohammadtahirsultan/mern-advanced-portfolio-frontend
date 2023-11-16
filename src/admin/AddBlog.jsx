@@ -56,7 +56,7 @@ const AddBlog = () => {
   };
 
   useEffect(() => {
-    getAllCategories()
+    // getAllCategories()
   }, []);
   return (
     <div className="flex">

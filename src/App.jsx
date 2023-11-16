@@ -12,6 +12,7 @@ import ForgotPassword from './components/ForgotPassword'
 import ResetPassword from './components/ResetPassword'
 import Dashboard from './admin/Dashboard'
 import AdminProjects from './admin/AdminProjects'
+import AdminBlogs from './admin/AdminBlogs.jsx'
 import Users from './admin/Users'
 import Profile from './components/User/Profile'
 import EditProfile from './components/User/EditProfile'
@@ -28,6 +29,11 @@ import Blog from './components/Blog/Post.jsx'
 import ThemeProvider from './components/themeProvider'
 import UserOptions from './components/layout/UserOptions.jsx'
 import ParticleComponent from './components/layout/Particles.jsx'
+import AddBlog from './admin/AddBlog.jsx'
+import EditBlog from './admin/EditBlog'
+import AddCategory from './admin/AddCategory.jsx'
+import Categories from './admin/Categories.jsx'
+import EditCategory from './admin/EditCategory.jsx'
 
 
 
@@ -61,10 +67,10 @@ const HeaderWithRoutes = () => {
 
   const { isAuthenticated, user, message } = useSelector(state => state.user)
 
-  
-//   useEffect(() => {
-//     dispatch(loadUser())
-// }, [])
+
+  //   useEffect(() => {
+  //     dispatch(loadUser())
+  // }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 
@@ -110,25 +116,28 @@ const HeaderWithRoutes = () => {
 
 
         {/* Admin Routes  */}
-
+{/* 
         {
-          user && isAuthenticated && user.role === "admin" &&
-          < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}>
+          user && isAuthenticated && user?.role === "admin" &&
+          < Route element={<ProtectedRoute isAuthenticated={isAuthenticated} isAdmin={user && user.role === "admin"} adminRoute={true} />}> */}
 
-            <Route path='/dashboard/testimonials' element={<Testimonials />} />
-            <Route path='/dashboard/users' element={<Users />} />
-            <Route path='/dashboard/projects' element={<AdminProjects />} />
             <Route path='/dashboard' element={<Dashboard />} />
-
+            <Route path='/dashboard/projects' element={<AdminProjects />} />
+            <Route path='/dashboard/blogs' element={<AdminBlogs />} />
+            <Route path='/dashboard/blog/create' element={<AddBlog />} />
+            <Route path='/dashboard/blog/:id' element={<EditBlog />} />
+            <Route path='/dashboard/categories' element={<Categories />} />
+            <Route path='/dashboard/category/add' element={<AddCategory />} />
+            <Route path='/dashboard/category/:Id' element={<EditCategory />} />
             <Route path='/dashboard/addprojects' element={<AddProject />} />
-
+            <Route path='/dashboard/testimonials' element={<Testimonials />} />
             <Route path='/dashboard/project/:id' element={<EditProject />} />
-
+            <Route path='/dashboard/users' element={<Users />} />
             <Route path='/dashboard/user/:id' element={<UpdateRole />} />
 
-          </Route>
+          {/* </Route>
 
-        }
+        } */}
 
         <Route path='*' element={<PageNotFound />} />
 

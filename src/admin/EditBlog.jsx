@@ -7,7 +7,7 @@ import { useRef } from "react";
 import JoditEditor from "jodit-react";
 import { getAllCategories } from "../redux/actions/category";
 
-const EditProject = () => {
+const EditBlog = () => {
 
   const { blog } = useSelector((state) => state.blog);
   const { categories } = useSelector((state) => state.category);
@@ -217,4 +217,4 @@ const EditProject = () => {
   );
 };
 
-export default EditProject;
+export default EditBlog;

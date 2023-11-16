@@ -1,88 +1,177 @@
-import { createReducer } from "@reduxjs/toolkit";
-
-export const blogReducer = createReducer({}, {
-
-    addBlogRequest: (state) => {
-        state.loading = true
-    },
-
-    addBlogSuccess: (state, action) => {
-        state.loading = false
-        state.message = action.payload.message
-        state.error = null
-    },
-
-    addBlogFail: (state, action) => {
-        state.loading = false
-        state.error = action.payload
-    },
-
-    getAllBlogsRequest: (state) => {
-        state.loading = true
-    },
-
-    getAllBlogsSuccess: (state, action) => {
-        state.loading = false
-        state.blogs = action.payload.blogs
-        state.error = null
-    },
-
-    getAllBlogsFail: (state, action) => {
-        state.loading = false
-        state.error = action.payload
-    },
+import axios from "axios";
+import { server } from "../../store";
 
 
-    getBlogDetailsRequest: (state) => {
-        state.loading = true
-    },
+export const getBlogDetails = (id) => async (dispatch) => {
 
-    getBlogDetailsSuccess: (state, action) => {
-        state.loading = false
-        state.blog = action.payload.blog
-        state.error = null
-    },
+    try {
 
-    getBlogDetailsFail: (state, action) => {
-        state.loading = false
-        state.error = action.payload
-    },
+        dispatch({
+            type: "getBlogDetailsRequest"
+        })
 
-    editBlogRequest: (state) => {
-        state.loading = true
-    },
+        const config = {
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }
 
-    editBlogSuccess: (state, action) => {
-        state.loading = false
-        state.message = action.payload.message
-        state.error = null
-    },
+        const { data } = await axios.get(`${server}/blog/${id}`, config)
 
-    editBlogFail: (state, action) => {
-        state.loading = false
-        state.error = action.payload
-    },
+        dispatch({
+            type: "getBlogDetailsSuccess",
+            payload: data
+        })
 
-    deleteBlogRequest: (state) => {
-        state.loading = true
-    },
 
-    deleteBlogSuccess: (state, action) => {
-        state.loading = false
-        state.message = action.payload.message
-        state.error = null
-    },
-
-    deleteBlogFail: (state, action) => {
-        state.loading = false
-        state.error = action.payload
-    },
-
-    clearMessage: (state) => {
-        state.message = null
-    },
-    clearError: (state) => {
-        state.error = null
+    } catch (error) {
+        dispatch({
+            type: "getBlogDetailsFail",
+            payload: error.response.data.message
+        })
     }
+}
 
-})
+export const addBlog = (formData) => async (dispatch) => {
+
+    try {
+
+        dispatch({
+            type: "addBlogRequest"
+        })
+
+        const config = {
+
+            headers: { "Content-Type": "application/json" },
+
+        };
+
+
+
+        const { data } = await axios.post(
+            `${server}/blog/create`,
+            formData,
+            config
+        );
+
+
+        dispatch({
+            type: "addBlogSuccess",
+            payload: data
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: "addBlogFail",
+            payload: error.response.data.message
+        })
+    }
+}
+
+
+export const editBlog = (formData, id) => async (dispatch) => {
+
+    try {
+
+        dispatch({
+            type: "editBlogRequest"
+        })
+
+        const config = {
+
+            headers: { "Content-Type": "application/json" },
+        };
+
+        console.log(formData);
+        const { data } = await axios.put(
+            `${server}/blog/${id}`,
+            formData,
+            config
+        );
+
+
+        dispatch({
+            type: "editBlogSuccess",
+            payload: data
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: "editBlogFail",
+            payload: error.response.data.message
+        })
+    }
+}
+
+
+export const deleteBlog = (id) => async (dispatch) => {
+
+    try {
+
+        dispatch({
+            type: "deleteBlogRequest"
+        })
+
+        const config = {
+
+            headers: { "Content-Type": "application/json" },
+
+        };
+
+
+        const { data } = await axios.delete(
+            `${server}/blog/delete/${id}`,
+            config
+        );
+
+
+        dispatch({
+            type: "deleteBlogSuccess",
+            payload: data
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: "deleteBlogFail",
+            payload: error.response.data.message
+        })
+    }
+}
+
+
+
+
+export const getAllBlogs = () => async (dispatch) => {
+
+    try {
+
+        dispatch({
+            type: "getAllBlogsRequest"
+        })
+
+        const config = {
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }
+
+        const { data } = await axios.get(`${server}/blogs/all`, config)
+
+
+        dispatch({
+            type: "getAllBlogsSuccess",
+            payload: data
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: "getAllBlogsFail",
+            payload: error.response.data.message
+        })
+    }
+}
+

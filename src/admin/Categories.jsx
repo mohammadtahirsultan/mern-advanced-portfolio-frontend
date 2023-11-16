@@ -6,7 +6,7 @@ import { deleteCategory, getAllCategories } from "../redux/actions/category";
 import Loader from "../components/Loader";
 import toast from "react-hot-toast";
 
-const Category = () => {
+const Categories = () => {
   const dispatch = useDispatch();
   const { loading, categories, message } = useSelector((state) => state.category);
 
@@ -22,7 +22,7 @@ const Category = () => {
     }
   }, [dispatch, message]);
   return (
-    <div className="flex ">
+    <div className="flex">
       <Sidebar />
 
       <section className="text-gray-600 body-font flex-grow ">
@@ -109,4 +109,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Categories;
