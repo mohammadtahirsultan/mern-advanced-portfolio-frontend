@@ -43,15 +43,14 @@ const LoginForm = () => {
 
 
     useEffect(() => {
-        // if (message) {
-        //     toast.success(message)
-        //     dispatch({ type: "clearMessage" })
-        // }
-        // if (error) {
-        //     toast.error(error)
-        //     dispatch({ type: "clearError" })
-        // }
-
+        if (message) {
+            toast.success(message)
+            dispatch({ type: "clearMessage" })
+        }
+        if (error) {
+            toast.error(error)
+            dispatch({ type: "clearError" })
+        }
 
         if (isAuthenticated) {
             return navigate("/profile")
