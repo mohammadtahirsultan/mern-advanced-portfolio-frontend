@@ -10,18 +10,25 @@ const ForgotPassword = () => {
 
     const [email, setEmail] = useState("")
 
+    const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
     const dispatch = useDispatch()
 
     const { loading, message, error } = useSelector(state => state.user)
 
     const forgotFormSubmit = (e) => {
         e.preventDefault()
+        if (!isEmailValid(email)) {
+            toast.error('Invalid Email Format');
+            return;
+        }
 
         dispatch(forgotPassword(email));
 
     }
 
     useEffect(() => {
+
         if (message) {
             toast.success(message)
             dispatch({ type: "clearMessage" })

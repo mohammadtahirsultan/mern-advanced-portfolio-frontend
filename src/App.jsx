@@ -60,17 +60,11 @@ export default App
 const HeaderWithRoutes = () => {
 
 
-  const dispatch = useDispatch()
-
   const { darkMode } = useSelector((state) => state.theme);
 
 
-  const { isAuthenticated, user, message } = useSelector(state => state.user)
+  const { isAuthenticated, user } = useSelector(state => state.user)
 
-
-  //   useEffect(() => {
-  //     dispatch(loadUser())
-  // }, [])
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
 

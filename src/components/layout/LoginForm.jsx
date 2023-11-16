@@ -12,12 +12,11 @@ const LoginForm = () => {
 
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+    const isPasswordValid = (password) => /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+\s]{8,}$/.test(password);
 
     const navigate = useNavigate()
     const { loading, message, error, isAuthenticated } = useSelector(state => state.user)
     const dispatch = useDispatch()
-
 
     const { darkMode } = useSelector((state) => state.theme);
 
