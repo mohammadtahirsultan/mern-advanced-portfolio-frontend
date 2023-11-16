@@ -147,8 +147,8 @@ const SignUpForm = () => {
 
                     <div>
                         <div className="flex flex-col  ">
-                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6 text-gray-900 ${darkMode && "text-white"}`} >Password</label>
-                            <label htmlFor="password" className={`inline text-xs mt-1 mb-2 leading-6 text-red-600 ${darkMode && "text-white"}`} >At least 8 Chracters with Alphabets & Numbers  </label>
+                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6`} >Password</label>
+                            <label htmlFor="password" className={`inline text-xs mt-1 mb-2 leading-6`} >At least 8 Chracters with Alphabets & Numbers  </label>
 
                         </div>
                         <div className="mt-1">
