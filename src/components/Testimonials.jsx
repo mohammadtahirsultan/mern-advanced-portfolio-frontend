@@ -16,14 +16,14 @@ const Testimonials = () => {
 
     console.log(approvedTestimonials);
     useEffect(() => {
-        if (error) {
-            toast.error(error)
-            dispatch({ type: "clearError" })
-        }
-        if (message) {
-            toast.success(message)
-            dispatch({ type: "clearMessage" })
-        }
+        // if (error) {
+        //     toast.error(error)
+        //     dispatch({ type: "clearError" })
+        // }
+        // if (message) {
+        //     toast.success(message)
+        //     dispatch({ type: "clearMessage" })
+        // }
 
         dispatch(getAllTestimonials())
     }, [error, message])
