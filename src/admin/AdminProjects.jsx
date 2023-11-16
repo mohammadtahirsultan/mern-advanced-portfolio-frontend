@@ -56,7 +56,6 @@ const AdminProjects = () => {
                                     <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Edit</th>
                                     <th className="px-4 py-3 title-font tracking-wider font-medium text-sm md:text-lg ">Delete</th>
 
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -71,10 +70,10 @@ const AdminProjects = () => {
                                                     <td className="px-4 py-3">{project.title}</td>
                                                     <td className="px-4 py-3">{project.createdAt.slice(0, 10)}</td>
                                                     <td className="px-4 py-3">{project.category}</td>
-                                                    <td className="px-4 py-3 text-lg text-gray-900">
+                                                    <td className="px-4 py-3 text-lg">
                                                         <a href={project.link} target='blank'>{project.link}</a>
                                                     </td>
-                                                    <td className="px-4 py-3 text-lg text-gray-900">
+                                                    <td className="px-4 py-3 text-lg ">
                                                         <button className='bg-black hover:bg-gray-700 text-white w-full py-0.5 rounded-md px-3'>
                                                             <Link to={`/dashboard/project/${project._id}`}>Edit</Link>
                                                         </button>

@@ -37,22 +37,22 @@ const AdminProjects = () => {
                 // !blogs === "undefined" ? "" :
                 <thead className={`${blogs?.length < 1 ? 'hidden' : ''}`}>
                   <tr>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100 rounded-tl rounded-bl">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg  rounded-tl rounded-bl">
                       Title
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg ">
                       Created At
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg ">
                       Category
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg ">
                       Author
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg ">
                       Edit
                     </th>
-                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg bg-gray-100">
+                    <th className="px-4 py-3 title-font tracking-wider font-medium  text-sm md:text-lg ">
                       Delete
                     </th>
                   </tr>
