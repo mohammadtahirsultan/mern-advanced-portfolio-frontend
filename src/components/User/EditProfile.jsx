@@ -19,7 +19,6 @@ const EditProfile = () => {
     const [image, setImage] = useState("")
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isPasswordValid = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
     const isNameValid = (name) => {
         // Check if the name is between 3 and 15 characters
         if (name.length < 3 || name.length > 15) {
@@ -85,11 +84,6 @@ const EditProfile = () => {
 
         if (!isEmailValid(email)) {
             toast.error('Invalid Email Format');
-            return;
-        }
-
-        if (!isPasswordValid(password)) {
-            toast.error('Invalid Password \nMinimum 8 Characters with Uppercase,Lowercase,Numbers Only');
             return;
         }
 
