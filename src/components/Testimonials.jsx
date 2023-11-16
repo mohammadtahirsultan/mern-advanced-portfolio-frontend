@@ -37,20 +37,16 @@ const Testimonials = () => {
     const { darkMode } = useSelector((state) => state.theme);
 
     return (
-        <section className="text-gray-600 body-font max-w-[100vw] ">
+        <section className="body-font max-w-[100vw] ">
             <div className="container md:px-5 md:py-16 mx-auto md:max-w-full max-w-[100vw]">
 
-                <h2 className={`${darkMode && 'text-white'} mt-10  mb-6 text-4xl text-center font-bold max-w-[100vw] `} > Testimonials</h2>
-                <hr className={`${darkMode && 'bg-white'} bg-black w-24 py-0.5 mx-auto mb-16 max-w-[100vw]`} />
-
-
+                <h2 className={`mt-10  mb-6 text-4xl text-center font-bold max-w-[100vw]`}>Testimonials</h2>
+                <hr className={`bg-black w-24 py-0.5 mx-auto mb-16 max-w-[100vw]`} />
 
 
                 {
                     loading ? <div className='flex max-w-full justify-center min-h-[65vh]'><Loader /> </div> :
                         <div className="flex flex-wrap mx-auto justify-center max-w-[100vw] ">
-
-
 
                             <section
                                 className="rounded-md p-6 text-center shadow-lg md:p-12 md:text-left bg-gradient-to-r from-slate-900 to-slate-700 max-w-[100vw] "

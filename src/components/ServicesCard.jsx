@@ -8,12 +8,12 @@ const ServicesCard = () => {
     const { darkMode } = useSelector((state) => state.theme);
 
     return (
-        <section className="text-gray-600 body-font">
+        <section className="body-font">
             <div className="container px-5 py-16 mx-auto max-w-[100vw]">
 
 
-                <h2 className={`${darkMode && 'text-white'} mt-10  mb-6 text-4xl text-center font-bold`}>Services</h2>
-                <hr className={`${darkMode && 'bg-white'} bg-black w-24 py-0.5 mx-auto mb-16`} />
+                <h2 className={`mt-10  mb-6 text-4xl text-center font-bold`}>Services</h2>
+                <hr className={`bg-black w-24 py-0.5 mx-auto mb-16`} />
 
 
 
@@ -40,8 +40,8 @@ const ServiceCard = ({ image, heading }) => {
 
 
     return (
-        <div className="p-4 md:w-1/3 w-full ">
-            <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+        <div className="p-4 md:w-1/3 w-full">
+            <div className="flex rounded-lg h-full p-8 flex-col shadow-xl border-2">
                 <div className="flex items-center justify-center mb-3">
                     <img src={image} height={50} width={50} alt='Services' className='mx' />
                 </div>

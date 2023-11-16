@@ -21,11 +21,11 @@ const ProjectCard = () => {
     }, [error])
 
     return (
-        <section className="text-gray-600 body-font">
+        <section className="body-font">
             <div className="container px-5 md:py-24 mx-auto">
 
-                <h2 className={`${darkMode && 'text-white'} mt-10  mb-6 text-4xl text-center font-bold`}>Projects</h2>
-                <hr className={`${darkMode && 'bg-white'} bg-black w-24 py-0.5 mx-auto mb-16`} />
+                <h2 className={`mt-10  mb-6 text-4xl text-center font-bold`}>Projects</h2>
+                <hr className={` bg-black w-24 py-0.5 mx-auto mb-16`} />
 
                 <div className="flex flex-wrap -m-4">
 
