@@ -14,7 +14,6 @@ const SignUpForm = () => {
     const [image, setImage] = useState("")
 
     const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isPasswordValid = (password) => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d ]{8,}$/.test(password);
     const isNameValid = (name) => {
         // Check if the name is between 3 and 15 characters
         if (name.length < 3 || name.length > 15) {
@@ -83,12 +82,6 @@ const SignUpForm = () => {
             return;
         }
 
-        if (!isPasswordValid(password)) {
-            toast.error('Invalid Password \nMinimum 8 Characters with Uppercase,Lowercase,Numbers and Special Characters');
-            return;
-        }
-
-
 
         const data = new FormData();
         data.set("name", name)
@@ -147,9 +140,7 @@ const SignUpForm = () => {
 
                     <div>
                         <div className="flex flex-col  ">
-                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6`} >Password</label>
-                            <label htmlFor="password" className={`inline text-xs mt-1 mb-2 leading-6`} >At least 8 Chracters with Alphabets & Numbers  </label>
-
+                            <label htmlFor="password" className={`mt-2 block text-sm font-medium leading-6`}>Password</label>
                         </div>
                         <div className="mt-1">
                             <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name='password' autoComplete="password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inappend ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inappend focus:ring-text-gray-800sm:text-sm sm:leading-6 px-2" />
