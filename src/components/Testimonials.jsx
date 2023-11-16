@@ -74,7 +74,7 @@ const Testimonials = () => {
 
                                                 {/* Testimonials */}
                                                 {
-                                                    approvedTestimonials > 0 && approvedTestimonials.map((testimonial) =>
+                                                    approvedTestimonials && approvedTestimonials.map((testimonial) =>
                                                     (
                                                         <div className="md:flex md:flex-row flex-col" key={testimonial?._id}>
 
