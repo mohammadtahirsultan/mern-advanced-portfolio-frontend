@@ -8,11 +8,6 @@ export default function AddReview() {
     const [open, setOpen] = useState(true)
     const [description, setDescription] = useState("")
 
-    const isDescriptionValid = () => {
-        const containsOnlyAlphabets = /^[a-zA-Z\s]+$/.test(description);
-        const containsOnlyNumbers = /^[0-9\s]+$/.test(description);
-        return containsOnlyAlphabets || containsOnlyNumbers;
-    };
     const cancelButtonRef = useRef(null)
 
     const dispatch = useDispatch()
@@ -33,14 +28,9 @@ export default function AddReview() {
     }, [error, message])
 
     const handleReview = async () => {
-        if (isDescriptionValid()) {
-            if (description === "") return toast.error("Please Add Review")
-            await dispatch(addReview(description))
-            setOpen(false)
-        } else {
-            // Display an error message or take appropriate action for invalid input
-            return toast.error('Invalid description. Only alphabets and numbers are allowed.');
-        }
+        if (description === "") return toast.error("Please Add Review")
+        await dispatch(addReview(description))
+        setOpen(false)
 
     }
 
