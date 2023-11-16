@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../redux/actions/user';
 import { toast } from 'react-hot-toast';
 import { toggleTheme } from '../redux/reducers/theme';
-import { Home } from '@mui/icons-material';
+import { Assignment, BorderColor, Category, Chat, Home, Language, Logout, People } from '@mui/icons-material';
 
 const Sidebar = () => {
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
     const { darkMode } = useSelector(state => state.theme)
     const handleThemeToggle = () => {
-      dispatch(toggleTheme());
+        dispatch(toggleTheme());
     };
 
 
@@ -48,8 +48,8 @@ const Sidebar = () => {
                                     to="/dashboard"
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
-                                   <Home className='h-6 w-6' />
-                                    <img src="/home.png" alt="home" className='h-6 w-6' />
+                                    <Home className='h-6 w-6' />
+                                    {/* <img src="/home.png" alt="home" className='h-6 w-6' /> */}
                                     <span>Home</span>
                                 </Link>
                             </li>
@@ -59,8 +59,8 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    <img src="/project.jpg" alt="project" className='h-6 w-6' />
-
+                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
+                                    <Assignment className='h-6 w-6' />
 
                                     <span>Projects</span>
                                 </Link>
@@ -71,8 +71,8 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    <img src="/project.jpg" alt="project" className='h-6 w-6' />
-
+                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
+                                    <BorderColor className='h-6 w-6' />
 
                                     <span>Blogs</span>
                                 </Link>
@@ -83,8 +83,8 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    <img src="/project.jpg" alt="project" className='h-6 w-6' />
-
+                                    {/* <img src="/project.jpg" alt="project" className='h-6 w-6' /> */}
+                                    <Category className='h-6 w-6' />
 
                                     <span>Categories</span>
                                 </Link>
@@ -95,8 +95,8 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-
-                                    <img src="/users.png" alt="users" className='h-6 w-6' />
+                                    {/* <img src="/users.png" alt="users" className='h-6 w-6' /> */}
+                                    <People className='h-6 w-6' />
 
                                     <span>Users</span>
                                 </Link>
@@ -107,7 +107,8 @@ const Sidebar = () => {
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
 
-                                    <img src="/testimonials.png" alt="testimonials" className='h-6 w-6' />
+                                    {/* <img src="/testimonials.png" alt="testimonials" className='h-6 w-6' /> */}
+                                    <Chat className='h-6 w-6' />
 
 
                                     <span>Testimonials</span>
@@ -122,7 +123,9 @@ const Sidebar = () => {
                                 >
 
 
-                                    <img src="/web.png" alt="back-to-website" className='h-6 w-6' />
+                                    {/* <img src="/web.png" alt="back-to-website" className='h-6 w-6' /> */}
+                                    <Language className='h-6 w-6' />
+
 
                                     <span>Back to Website</span>
                                 </Link>
@@ -133,13 +136,14 @@ const Sidebar = () => {
                                     onClick={logoutHandle}
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
-                                    <img src="/logout.png" alt="logout" className='h-6 w-6' />
+                                    {/* <img src="/logout.png" alt="logout" className='h-6 w-6' /> */}
+                                    <Logout className='h-6 w-6' />
 
                                     <span>Logout</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link onClick={handleThemeToggle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold md:pt-2`}>
+                                <Link onClick={handleThemeToggle} className={`transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold md:pt-2`}>
                                     {
                                         darkMode ? <img className={`${darkMode && 'transition ease-in-out delay-[700ms] hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8 transition ease-in-out delay-[700ms]' src="/sun.webp" alt="moon" />
                                     }
