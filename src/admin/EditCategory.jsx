@@ -26,7 +26,7 @@ const EditCategory = () => {
         console.log(category);
         await dispatch(editCategory(category, id));
 
-        navigate("/category");
+        navigate("/dashboard/categories");
     };
 
     useEffect(() => {

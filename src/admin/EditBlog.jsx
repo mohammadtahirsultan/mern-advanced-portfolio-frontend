@@ -38,7 +38,7 @@ const EditBlog = () => {
     setTitle("");
     setContent("");
     setCategory("");
-    navigate("/");
+    navigate("/dashboard/blogs");
   };
 
   useEffect(() => {
