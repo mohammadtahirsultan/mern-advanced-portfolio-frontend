@@ -2,8 +2,6 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 
 const Footer = () => {
-    const { darkMode } = useSelector((state) => state.theme);
-
     return (
         <footer className="body-font">
             <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
