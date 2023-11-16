@@ -78,7 +78,7 @@ const AdminProjects = () => {
                           </td>
                           <td className="px-4 py-3 text-lg text-gray-900">
                             <button className="bg-black hover:bg-gray-700 text-white w-full py-0.5 rounded-md px-3">
-                              <Link to={`/dashboard/blog/${blog?._id}`}>
+                              <Link to={`/dashboard/blog/edit/${blog?._id}`}>
                                 Edit
                               </Link>
                             </button>

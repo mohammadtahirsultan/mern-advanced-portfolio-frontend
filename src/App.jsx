@@ -125,7 +125,7 @@ const HeaderWithRoutes = () => {
             <Route path='/dashboard/projects' element={<AdminProjects />} />
             <Route path='/dashboard/blogs' element={<AdminBlogs />} />
             <Route path='/dashboard/blog/create' element={<AddBlog />} />
-            <Route path='/dashboard/blog/:id' element={<EditBlog />} />
+            <Route path='/dashboard/blog/edit/:id' element={<EditBlog />} />
             <Route path='/dashboard/categories' element={<Categories />} />
             <Route path='/dashboard/category/add' element={<AddCategory />} />
             <Route path='/dashboard/category/edit/:id' element={<EditCategory />} />
