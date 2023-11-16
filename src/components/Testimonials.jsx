@@ -95,11 +95,11 @@ const Testimonials = () => {
                                                                 </p>
                                                                 <p
                                                                     className="mb-1 text-xl font-semibold">
-                                                                    {testimonial.user.name}
+                                                                    {testimonial?.user?.name}
                                                                 </p>
                                                                 <p
                                                                     className="mb-0 font-semibold">
-                                                                    {testimonial.user.role}
+                                                                    {testimonial?.user?.role}
                                                                 </p>
                                                             </div>
                                                         </div>
