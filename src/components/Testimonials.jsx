@@ -69,7 +69,7 @@ const Testimonials = () => {
                                     <div className="md:max-w-5xl">
 
                                         <div
-                                            className={`md:m-8 block rounded-lg ${darkMode && ''} md:bg-white p-6 pt-20 shadow-lg  dark:shadow-black/20 max-w-[100vw] `}>
+                                            className={`md:m-8 block rounded-lg p-6 pt-20 shadow-lg dark:shadow-black/20 max-w-[100vw] `}>
 
 
                                             <Carousel autoPlay={true} interval={3000} infiniteLoop={true} showThumbs={false} showIndicators={false} showStatus={false} showArrows={true}>
