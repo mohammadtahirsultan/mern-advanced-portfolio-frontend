@@ -37,7 +37,7 @@ const Blogs = () => {
   let { currentIndex, images, increment } = getCarouselData();
 
   const dispatch = useDispatch()
-  const { blogs,error,loading } = useSelector(state => state.blog)
+  const { blogs, error, loading } = useSelector(state => state.blog)
   const { darkMode } = useSelector((state) => state.theme);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const Blogs = () => {
                           <div className="flex items-center flex-wrap ">
 
                             <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-800'} mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
-                              <a target='blank' href={blog.link}>Read More</a>
+                              <Link to={`/${blog?._id}`}>Read More</Link>
 
                             </button>
                           </div>
