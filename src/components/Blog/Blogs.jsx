@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProjects } from '../../redux/actions/project';
 import Loader from '../Loader';
 import { getAllBlogs } from '../../redux/actions/blog';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
 
