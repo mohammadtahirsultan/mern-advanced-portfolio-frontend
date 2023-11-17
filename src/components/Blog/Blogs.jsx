@@ -94,7 +94,7 @@ const Blogs = () => {
         {/* Posts Section */}
 
 
-        <section className="ody-font">
+        <section className="body-font">
           <div className="container px-5 md:py-24 mx-auto">
 
             <div className="flex flex-wrap -m-4">
