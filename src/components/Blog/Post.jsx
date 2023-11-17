@@ -98,14 +98,14 @@ function Blog() {
                     {/* ... Article ... */}
                     <article className="flex flex-col shadow my-4">
                         {/* ... Article Image ... */}
-                        <a href="#" className="hover:opacity-75">
-                            <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1" alt="Article" />
-                        </a>
+                        <span className="hover:opacity-75">
+                            <img src={blog?.image?.url} alt={blog?.title} />
+                        </span>
                         <div className=" flex flex-col justify-start p-6">
-                            <a href="#" className="text-sm font-bold uppercase pb-4">Technology</a>
-                            <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">Lorem Ipsum Dolor Sit Amet Dolor Sit Amet</a>
+                            <a href="#" className="text-sm font-bold uppercase pb-4">{blog?.categor?.categoryy}</a>
+                            <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{blog?.title}</a>
                             <p href="#" className="text-sm pb-8">
-                                By <a href="#" className="font-semibold hover:text-gray-800">David Grzyb</a>, Published on April 25th, 2020
+                                By <a href="#" className="font-semibold hover:text-gray-800">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0,10)}
                             </p>
                             <h1 className="text-2xl font-bold pb-3">Introduction</h1>
                             <p className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna. Proin bibendum urna mattis ante malesuada ultrices. Etiam in turpis vitae elit dictum aliquet. Donec mattis risus in turpis dapibus, eget tempus sem tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In est enim, imperdiet sed ornare quis, pellentesque vel risus. Nunc vitae vestibulum turpis. Quisque eget eleifend urna. Etiam et vulputate purus, ut egestas sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis quis neque non urna venenatis mollis et at massa. Pellentesque sem lacus, malesuada vel hendrerit molestie, mollis vel elit.</p>
