@@ -51,16 +51,16 @@ function Blog() {
     console.log(params.id);
     console.log(blog);
     return (
-        <div className="">
+        <div>
 
 
             {/* ... Text Header ... */}
             <header className="w-full container mx-auto">
                 <div className="flex flex-col items-center py-12">
-                    <h2 className={`${darkMode && ''} font-bold text-gray-800 uppercase text-5xl`}>
+                    <h2 className={`font-bold  uppercase text-5xl`}>
                         Ghareebstar Blogs
                     </h2>
-                    <p className={`${darkMode && ''} text-lg`}>
+                    <p className={`text-lg`}>
                         Lorem Ipsum Dolor Sit Amet
                     </p>
                 </div>

@@ -111,9 +111,9 @@ const Blogs = () => {
                           </a>
                         </div>
                         <div className="p-6">
-                          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{blog?.category?.category}</h2>
-                          <h1 className={`${darkMode && 'text-white'} title-font text-lg font-medium text-gray-900 mb-3`}>{blog.title}</h1>
-                          <p className={`${darkMode && 'text-white'} leading-relaxed mb-3`}>{blog?.shortDescription}</p>
+                          <h2 className="tracking-widest text-xs title-font font-medium mb-1">{blog?.category?.category}</h2>
+                          <h1 className={` title-font text-lg font-medium mb-3`}>{blog.title}</h1>
+                          <p className={`$ leading-relaxed mb-3`}>{blog?.shortDescription}</p>
                           <div className="flex items-center flex-wrap ">
 
                             <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-800'} mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
