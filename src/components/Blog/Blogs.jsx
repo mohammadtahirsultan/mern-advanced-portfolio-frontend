@@ -37,7 +37,7 @@ const Blogs = () => {
   let { currentIndex, images, increment } = getCarouselData();
 
   const dispatch = useDispatch()
-  const { blogs,error } = useSelector(state => state.blog)
+  const { blogs,error,loading } = useSelector(state => state.blog)
   const { darkMode } = useSelector((state) => state.theme);
 
   useEffect(() => {
