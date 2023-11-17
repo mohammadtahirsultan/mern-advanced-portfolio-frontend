@@ -94,7 +94,7 @@ const Blogs = () => {
         {/* Posts Section */}
 
 
-        <section className="text-gray-600 body-font">
+        <section className="ody-font">
           <div className="container px-5 md:py-24 mx-auto">
 
             <div className="flex flex-wrap -m-4">
@@ -106,9 +106,10 @@ const Blogs = () => {
                     <div className="p-4 md:w-1/3" key={blog?._id}>
                       <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                         <div className="rounded-lg w-full h-1/2">
-                          <a target='blank' href={blog?.link} >
+                          <Link to={`/blog/${blog?._id}`} >
                             <img alt="content" className="w-full h-full object-cover" src={blog?.image?.url} />
-                          </a>
+                          </Link>
+
                         </div>
                         <div className="p-6">
                           <h2 className="tracking-widest text-xs title-font font-medium mb-1">{blog?.category?.category}</h2>
@@ -137,10 +138,10 @@ const Blogs = () => {
         </section>
 
 
-      </div>
+      </div >
 
       {/* Footer */}
-      <footer className="w-full border-t pb-12">
+      <footer footer className="w-full border-t pb-12" >
         <div className="relative w-full flex items-center invisible md:visible md:pb-12">
           <button
             className="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
@@ -160,8 +161,8 @@ const Blogs = () => {
         </div>
 
 
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 };
 
