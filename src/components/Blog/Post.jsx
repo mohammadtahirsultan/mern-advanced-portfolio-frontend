@@ -3,8 +3,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProjects } from '../../redux/actions/project';
 import toast from 'react-hot-toast';
+import { useParams } from 'react-router-dom';
+import { getBlogDetails } from '../../redux/actions/blog';
 
 function Blog() {
+    const params = useParams()
+
+
     // const getCarouselData = () => {
     //     return {
     //         currentIndex: 0,
@@ -31,7 +36,8 @@ function Blog() {
     let open = false; // Assuming this is declared somewhere
 
     const dispatch = useDispatch()
-    const { loading, error, featuredProjects } = useSelector(state => state.project)
+    const { blog } = useSelector(state => state.blog)
+    const { error } = useSelector(state => state.project)
     const { darkMode } = useSelector((state) => state.theme);
 
     useEffect(() => {
@@ -40,9 +46,10 @@ function Blog() {
             dispatch({ type: "clearError" })
         }
 
-        //   dispatch(getAllProjects())
-    }, [error])
-
+        dispatch(getBlogDetails(params.id))
+    }, [error, params.id])
+    console.log(params.id);
+    console.log(blog);
     return (
         <div className="">
 
@@ -134,7 +141,7 @@ function Blog() {
                                 <a className="pl-4" href="https://instagram.com/ghareebstar">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                               
+
                                 <a className="pl-4" href="https://linkedin.in/ghareebstar">
                                     <i className="fab fa-linkedin"></i>
                                 </a>

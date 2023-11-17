@@ -37,7 +37,6 @@ const Blogs = () => {
   let { currentIndex, images, increment } = getCarouselData();
 
   const dispatch = useDispatch()
-  const { loading, error, featuredProjects } = useSelector(state => state.project)
   const { blogs } = useSelector(state => state.blog)
   const { darkMode } = useSelector((state) => state.theme);
 
@@ -48,9 +47,7 @@ const Blogs = () => {
     }
 
     dispatch(getAllBlogs())
-    dispatch(getAllProjects())
   }, [error])
-  console.log(blogs);
 
   return (
     <div >
