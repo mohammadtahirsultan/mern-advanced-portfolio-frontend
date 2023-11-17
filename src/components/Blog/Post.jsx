@@ -107,7 +107,7 @@ function Blog() {
                             <p href="#" className="text-sm pb-8">
                                 By <a href="#" className="font-semibold hover:text-gray-800">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0, 10)}
                             </p>
-                            <div dangerouslySetInnerHTML={{ __html: singleBlog?.content }} />
+                            <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
                         </div>
                     </article>
 
