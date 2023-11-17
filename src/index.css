@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: url("/cursor.png"), auto;
+}
+
 .speedDial {
   position: fixed;
   right: 3vmax;
