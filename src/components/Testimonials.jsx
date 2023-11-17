@@ -15,15 +15,6 @@ const Testimonials = () => {
     const { isAuthenticated } = useSelector(state => state.user)
 
     useEffect(() => {
-        // if (error) {
-        //     toast.error(error)
-        //     dispatch({ type: "clearError" })
-        // }
-        // if (message) {
-        //     toast.success(message)
-        //     dispatch({ type: "clearMessage" })
-        // }
-
         dispatch(getAllTestimonials())
     }, [error, message])
 
@@ -86,7 +77,7 @@ const Testimonials = () => {
 
 
 
-                                                            <div className="md:ml-4 md:mt-0 text-center md:text-center md:w-2/3">
+                                                            <div className="md:ml-4 md:mt-0  md:pt-16 text-center md:text-center md:w-2/3">
                                                                 <p
                                                                     className="mb-4 font-light">
                                                                     {testimonial.description}
