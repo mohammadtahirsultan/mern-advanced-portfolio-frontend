@@ -103,9 +103,9 @@ function Blog() {
                         </span>
                         <div className=" flex flex-col justify-start p-6">
                             <a href="#" className="text-sm font-bold uppercase pb-4">{blog?.category?.category}</a>
-                            <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{blog?.title}</a>
+                            <a href="#" className="text-3xl font-bold pb-4">{blog?.title}</a>
                             <p href="#" className="text-sm pb-8">
-                                By <a href="#" className="font-semibold hover:text-gray-800">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0, 10)}
+                                By <a href="#" className="font-semibold">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0, 10)}
                             </p>
                             <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
                         </div>
