@@ -105,11 +105,9 @@ function Blog() {
                             <a href="#" className="text-sm font-bold uppercase pb-4">{blog?.category?.category}</a>
                             <a href="#" className="text-3xl font-bold hover:text-gray-700 pb-4">{blog?.title}</a>
                             <p href="#" className="text-sm pb-8">
-                                By <a href="#" className="font-semibold hover:text-gray-800">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0,10)}
+                                By <a href="#" className="font-semibold hover:text-gray-800">{blog?.author}</a>, Published on {blog?.createdAt?.slice(0, 10)}
                             </p>
-                            <h1 className="text-2xl font-bold pb-3">Introduction</h1>
-                            <p className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna. Proin bibendum urna mattis ante malesuada ultrices. Etiam in turpis vitae elit dictum aliquet. Donec mattis risus in turpis dapibus, eget tempus sem tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In est enim, imperdiet sed ornare quis, pellentesque vel risus. Nunc vitae vestibulum turpis. Quisque eget eleifend urna. Etiam et vulputate purus, ut egestas sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis quis neque non urna venenatis mollis et at massa. Pellentesque sem lacus, malesuada vel hendrerit molestie, mollis vel elit.</p>
-                            {/* ... More content ... */}
+                            <div dangerouslySetInnerHTML={{ __html: singleBlog?.content }} />
                         </div>
                     </article>
 
