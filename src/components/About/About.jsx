@@ -11,8 +11,8 @@ const About = () => {
                 </div>
                 <div className="container px-6 md:px-12">
                     <div
-                        className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
-                        <h2 className='text-3xl md:text-[2.9rem] text-center font-bold text-gray-600'>
+                        className="block rounded-lg px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04) md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
+                        <h2 className='text-3xl md:text-[2.9rem] text-center font-bold '>
 
 
                             <Typewriter
@@ -40,7 +40,7 @@ const About = () => {
                             {/* Second Column  */}
                             <div className='flex justify-center items-center gap-8 flex-col md:border-l-2 border-gray-200' >
 
-                                <h2 className='mt-4 md:mt-0 text-xl md:text-3xl font-semibold text-center'>Our Brands</h2>
+                                <h2 className='mt-4 md:mt-0 text-2xl md:text-3xl font-semibold text-center'>Our Brands</h2>
 
                                 <div className="flex ">
                                     <a className="text-gray-500" href='https://www.youtube.com'>
