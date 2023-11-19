@@ -72,7 +72,7 @@ const ProjectCard = () => {
               <div className="sm:w-1/3 mb-10 px-4 rounded-lg" key={project._id}>
                 <div className="rounded-lg w-full h-2/3">
                   <a target='blank' href={project?.link} >
-                    <img alt="content" className="w-full h-full object-cover" src={project?.image.url} />
+                    <img alt="content" className="w-full h-full object-cover rounded-xl" src={project?.image.url} />
                   </a>
                 </div>
                 <h2 className={`${darkMode && 'text-white'} title-font text-2xl font-medium text-gray-900 mt-6 mb-3`}>{project?.title}</h2>
