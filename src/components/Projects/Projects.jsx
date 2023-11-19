@@ -66,7 +66,7 @@ const ProjectCard = () => {
 
     <>
       {
-        loading ? <div className='flex w-screen justify-center' ><Loader /> </div> : <>
+        loading ? <div className='flex w-screen justify-center ' ><Loader /> </div> : <>
           {
             projects && projects.map((project) => (
               <div className="sm:w-1/3 mb-10 mt-4 px-2 rounded-lg" key={project._id}>
@@ -75,8 +75,8 @@ const ProjectCard = () => {
                     <img alt="content" className="w-full h-full object-cover rounded-xl" src={project?.image.url} />
                   </a>
                 </div>
-                <h2 className={`title-font text-xl md:text-2xl font-medium text-gray-900 mt-6 mb-3`}>{project?.title}</h2>
-                <p className="leading-relaxed text-base px-8 mb-6">{project?.description}</p>
+                <h2 className={`title-font text-xl md:text-2xl font-medium mt-6 mb-3`}>{project?.title}</h2>
+                <p className="leading-relaxed text-sm px-8 mb-2">{project?.description}</p>
                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-500'} flex mx-auto mt-2 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
                   <a href={project?.link}>See the Demo </a>
                 </button>
