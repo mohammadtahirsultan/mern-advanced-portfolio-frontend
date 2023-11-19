@@ -38,7 +38,7 @@ const HeroSection = () => {
 
                         <Typewriter
                             options={{
-                                strings: " Ghareeb Star Portfolio ",
+                                strings: " Ghareeb Star World",
                                 autoStart: true,
                                 loop: true,
                             }}
