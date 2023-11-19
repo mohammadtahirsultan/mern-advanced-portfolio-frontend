@@ -33,9 +33,9 @@ const ProjectCard = () => {
                         loading ? <div className='flex w-full justify-center'><Loader /> </div> :
 
                             featuredProjects && featuredProjects.map((project) => (
-                                <div className="p-2 md:w-1/3" key={project._id}>
+                                <div className="p-4 md:w-1/3" key={project._id}>
                                     <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                                        <div className="rounded-lg w-full h-1/2">
+                                        <div className="rounded-lg w-full h-1/3">
                                             <a target='blank' href={project?.link} >
                                                 <img alt="content" className="w-full h-full object-cover" src={project?.image.url} />
                                             </a>
