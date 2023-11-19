@@ -13,7 +13,7 @@ const HeroSection = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            const newText = window.innerWidth <= 768 ? originalText.substring(0, 50) : originalText;
+            const newText = window.innerWidth <= 768 ? originalText.substring(0, 150) : originalText;
             setDisplayedText(newText);
         };
 
