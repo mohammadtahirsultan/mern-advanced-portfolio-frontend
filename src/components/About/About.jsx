@@ -38,9 +38,9 @@ const About = () => {
 
 
                             {/* Second Column  */}
-                            <div className='flex justify-center items-center gap-8 flex-col border-l-2 border-gray-200' >
+                            <div className='flex justify-center items-center gap-8 flex-col md:border-l-2 border-gray-200' >
 
-                                <h2 className='text-3xl font-semibold text-center'>Our Brands</h2>
+                                <h2 className='mt-4 md:mt-0 text-xl md:text-3xl font-semibold text-center'>Our Brands</h2>
 
                                 <div className="flex ">
                                     <a className="text-gray-500" href='https://www.youtube.com'>
