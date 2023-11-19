@@ -76,7 +76,7 @@ const ProjectCard = () => {
                   </a>
                 </div>
                 <h2 className={`${darkMode && 'text-white'} title-font text-2xl font-medium text-gray-900 mt-6 mb-3`}>{project?.title}</h2>
-                <p className="leading-relaxed text-base px-8">{project?.description}</p>
+                <p className="leading-relaxed text-base px-8 md:mb-0 mb-4">{project?.description}</p>
                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-500'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none hover:bg-gray-800 rounded px-8`}>
                   <a href={project?.link}>See the Demo </a>
                 </button>
