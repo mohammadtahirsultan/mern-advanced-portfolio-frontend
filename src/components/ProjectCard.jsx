@@ -48,7 +48,6 @@ const ProjectCard = () => {
 
                                                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-800'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none rounded px-8`}>
                                                     <a target='blank' href={project.link}>See the Demo </a>
-
                                                 </button>
                                             </div>
                                         </div>
