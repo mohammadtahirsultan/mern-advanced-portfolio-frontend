@@ -21,7 +21,7 @@ const UserOptions = ({ user }) => {
 
   const navigate = useNavigate();
 
-  if (user.role === "admin") {
+  if (user.role === "dhola") {
     actions.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
