@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
 import { animate, motion } from "framer-motion"
-import { useSelector } from 'react-redux';
-
 
 const IndustryExperince = () => {
 
@@ -31,8 +29,6 @@ const IndustryExperince = () => {
       onUpdate: (v) => YearCount.current.textContent = v.toFixed()
     })
   }
-
-  const { darkMode } = useSelector((state) => state.theme);
 
   return (
     <section className="body-font">

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import AddReview from './AddReviewModal';
-import { toast } from 'react-hot-toast';
 import { getAllTestimonials } from '../redux/actions/testimonial';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
