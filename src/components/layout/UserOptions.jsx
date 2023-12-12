@@ -7,13 +7,16 @@ import { Backdrop, SpeedDial, SpeedDialAction } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { logoutUser } from "../../redux/actions/user";
+import { useAuth0 } from "@auth0/auth0-react";
 const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
+
+  const { logout, user, isAuthenticated } = useAuth0();
 
   const { message, error } = useSelector((state) => state.user);
   const actions = [
     { icon: <PersonIcon />, name: "Account", func: Person },
-    
+
     { icon: <ExitToApp />, name: "Logout", func: Logout },
   ];
 
@@ -21,7 +24,7 @@ const UserOptions = ({ user }) => {
 
   const navigate = useNavigate();
 
-  if (user.role === "dhola") {
+  if (user.email === "tahirsultanofficial@gmail.com") {
     actions.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
@@ -36,8 +39,9 @@ const UserOptions = ({ user }) => {
     navigate("/profile");
   }
 
- async function Logout() {
-    await dispatch(logoutUser());
+  async function Logout() {
+    // await dispatch(logoutUser());
+    logout({ logoutParams: { returnTo: window.location.origin } })
   }
 
   useEffect(() => {
@@ -59,7 +63,7 @@ const UserOptions = ({ user }) => {
         icon={
           <img
             className="speedDialIcon"
-            src={user && user.image.url ? user.image.url : "/logo.webp"}
+            src={user && user.picture ? user.picture : "/logo.webp"}
             alt="Profile"
           />
         }
