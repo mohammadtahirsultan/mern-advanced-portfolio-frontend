@@ -5,9 +5,11 @@ import { logoutUser } from '../redux/actions/user';
 import { toast } from 'react-hot-toast';
 import { toggleTheme } from '../redux/reducers/theme';
 import { Assignment, BorderColor, Category, Chat, Home, Language, Logout, People } from '@mui/icons-material';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Sidebar = () => {
 
+    const { logout } = useAuth0();
 
     const dispatch = useDispatch()
 
@@ -125,8 +127,9 @@ const Sidebar = () => {
                             </li>
 
                             <li className="rounded-sm">
+
                                 <Link
-                                    onClick={logoutHandle}
+                                    onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     {/* <img src="/logout.png" alt="logout" className='h-6 w-6' /> */}
@@ -140,7 +143,7 @@ const Sidebar = () => {
                                     {
                                         darkMode ? <img className={`${darkMode && 'transition ease-in-out delay-[700ms] hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8 transition ease-in-out delay-[700ms]' src="/sun.webp" alt="moon" />
                                     }
-                                  
+
                                 </Link>
                             </li>
 

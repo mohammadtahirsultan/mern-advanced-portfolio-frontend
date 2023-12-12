@@ -5,8 +5,11 @@ import { Call, LockPerson} from '@mui/icons-material';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/reducers/theme";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
+  const { loginWithRedirect } = useAuth0();
+
   const dispatch = useDispatch()
   const { darkMode } = useSelector(state => state.theme)
   const handleThemeToggle = () => {
@@ -57,11 +60,13 @@ const Header = () => {
 
     />
     <div className="absolute right-12 top-10 h-[5rem]">
+    <button onClick={() => loginWithRedirect()}>Log In</button>
     <Link onClick={handleThemeToggle} className={`mr-5 transition ease-in-out delay-[700ms] ${darkMode && 'hover:text-gray-400'}  hover:text-gray-900 hover:font-semibold md:pt-2`}>
             {
               darkMode ? <img className={`${darkMode && 'transition ease-in-out delay-[700ms] hover:text-gray-400'} h-8 w-8`} src="/moon.jpg" alt="moon" /> : <img className='h-8 w-8 transition ease-in-out delay-[700ms]' src="/sun.webp" alt="moon" />
             }
           </Link>
+
        </div>
    </div>
  </div>
