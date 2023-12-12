@@ -37,7 +37,7 @@ const Profile = () => {
                 <img className="object-cover object-top w-full" src='https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt={`${user?.name}'s Profile`} />
             </div>
             <div className="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
-                <img className="object-cover object-center h-32" src={user?.image} alt='Woman looking front' />
+                <img className="object-cover object-center h-32" src={user?.picture} alt='Woman looking front' />
             </div>
             <div className="text-center mt-4">
                 <h2 className="font-semibold mt-2">{user?.name}</h2>
