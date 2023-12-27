@@ -1,14 +1,12 @@
 import React from "react";
 import { ReactNavbar } from "overlay-navbar";
-import logo from "./logo.png";
+import logo from "/logo.png";
 import { Call, LockPerson} from '@mui/icons-material';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/reducers/theme";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-  const { loginWithRedirect } = useAuth0();
 
   const dispatch = useDispatch()
   const { darkMode } = useSelector(state => state.theme)
