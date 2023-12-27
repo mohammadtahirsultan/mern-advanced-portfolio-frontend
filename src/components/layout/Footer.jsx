@@ -22,17 +22,17 @@ const Footer = () => {
                         <img src='/fb.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
-                    <a className="ml-3 " href='https://www.github.com/Sigma Developers'>
+                    <a className="ml-3 " href='https://www.github.com/ghareebstar'>
                         <img src='/gh.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
 
-                    <a className="ml-3 " href='https://www.linkedin.com/in/Sigma Developers'>
+                    <a className="ml-3 " href='https://www.linkedin.com/in/ghareebstar'>
                         <img src='/li.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
 
-                    <a className="ml-3 " href='https://www.instagram.com/Sigma Developers'>
+                    <a className="ml-3 " href='https://www.instagram.com/ghareebstar'>
                         <img src='/ig.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
 
                     </a>
