@@ -7,11 +7,8 @@ import { Backdrop, SpeedDial, SpeedDialAction } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { logoutUser } from "../../redux/actions/user";
-import { useAuth0 } from "@auth0/auth0-react";
 const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
-
-  const { logout, user, isAuthenticated } = useAuth0();
 
   const { message, error } = useSelector((state) => state.user);
   const actions = [
