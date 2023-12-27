@@ -34,7 +34,6 @@ import EditBlog from './admin/EditBlog'
 import AddCategory from './admin/AddCategory.jsx'
 import Categories from './admin/Categories.jsx'
 import EditCategory from './admin/EditCategory.jsx'
-import { useAuth0 } from '@auth0/auth0-react'
 
 
 
@@ -61,9 +60,7 @@ const HeaderWithRoutes = () => {
 
   const { darkMode } = useSelector((state) => state.theme);
 
-  const { user, isAuthenticated, isLoading } = useAuth0();
-
-  // const { isAuthenticated, user } = useSelector(state => state.user)
+  const { isAuthenticated, user } = useSelector(state => state.user)
 
   const location = useLocation();
   const showHeader = !location.pathname.startsWith('/dashboard');
