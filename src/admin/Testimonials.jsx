@@ -43,7 +43,7 @@ const Testimonials = () => {
             <section className=" body-font container">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-8">
-                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2">Ghareebstar Testimonials</h1>
+                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2">Sigma Developers Testimonials</h1>
 
                     </div>
                     <div className=" w-full mx-auto overflow-auto">

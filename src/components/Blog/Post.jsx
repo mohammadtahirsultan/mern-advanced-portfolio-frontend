@@ -58,7 +58,7 @@ function Blog() {
             <header className="w-full container mx-auto">
                 <div className="flex flex-col items-center py-12">
                     <h2 className={`font-bold  uppercase text-5xl`}>
-                        Ghareebstar Blogs
+                        Sigma Developers Blogs
                     </h2>
                     <p className={`text-lg`}>
                         Lorem Ipsum Dolor Sit Amet
@@ -133,14 +133,14 @@ function Blog() {
                             <p className="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel neque non libero suscipit suscipit eu eu urna.</p>
                             {/* ... Social Icons ... */}
                             <div className="flex items-center justify-center md:justify-start text-2xl no-underline pt-4">
-                                <a className="" href="https://facebook.com/ghareebstar">
+                                <a className="" href="https://facebook.com/Sigma Developers">
                                     <i className="fab fa-facebook"></i>
                                 </a>
-                                <a className="pl-4" href="https://instagram.com/ghareebstar">
+                                <a className="pl-4" href="https://instagram.com/Sigma Developers">
                                     <i className="fab fa-instagram"></i>
                                 </a>
 
-                                <a className="pl-4" href="https://linkedin.in/ghareebstar">
+                                <a className="pl-4" href="https://linkedin.in/Sigma Developers">
                                     <i className="fab fa-linkedin"></i>
                                 </a>
                             </div>
@@ -165,8 +165,8 @@ function Blog() {
                         <div className="grid grid-cols-3 gap-3">
                             {/* ... Instagram Images ... */}
                         </div>
-                        <a href="https://instagram.com/ghareebstar" className="w-full font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-6">
-                            <i className="fab fa-instagram mr-2"></i> Follow @ghareebstar
+                        <a href="https://instagram.com/Sigma Developers" className="w-full font-bold text-sm uppercase rounded flex items-center justify-center px-2 py-3 mt-6">
+                            <i className="fab fa-instagram mr-2"></i> Follow @Sigma Developers
                         </a>
                     </div>
                 </aside>

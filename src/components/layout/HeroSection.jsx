@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 const HeroSection = () => {
     const { darkMode } = useSelector((state) => state.theme);
 
-    const originalText = "Ghareeb Star Blog, Your Source for Programming Insights and Web Development Wonders!❤😎 Explore the fusion of programming brilliance and web development artistry at Ghareeb Star Blog. Join me in unraveling the complexities of coding, discovering valuable tips, and diving into the realm of crafting captivating websites. Delve into my web development projects, where innovation knows no bounds. Let's embark on this digital adventure together.";
+    const originalText = "Sigma Developers Blog, Your Source for Programming Insights and Web Development Wonders!❤😎 Explore the fusion of programming brilliance and web development artistry at Sigma Developers Blog. Join me in unraveling the complexities of coding, discovering valuable tips, and diving into the realm of crafting captivating websites. Delve into my web development projects, where innovation knows no bounds. Let's embark on this digital adventure together.";
 
     const [displayedText, setDisplayedText] = useState(originalText);
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
 
                         <Typewriter
                             options={{
-                                strings: " Ghareeb Star World",
+                                strings: " Sigma Developers World",
                                 autoStart: true,
                                 loop: true,
                             }}

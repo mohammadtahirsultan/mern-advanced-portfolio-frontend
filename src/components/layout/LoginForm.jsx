@@ -55,7 +55,7 @@ const LoginForm = () => {
     return (
         <div className="flex max-h-screen mb-[.19rem] min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img className="mx-auto h-28 w-auto rounded-full" src="/logo.webp" alt="Ghareeb Star Programmer" />
+                <img className="mx-auto h-28 w-auto rounded-full" src="/logo.webp" alt="Sigma Developers Programmer" />
                 <h2 className={`mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ${darkMode && "text-white"}`}>Sign in to your account</h2>
             </div>
 
