@@ -31,7 +31,7 @@ const About = () => {
 
                             {/* First Column  */}
                             <div className='flex justify-center items-center flex-col gap-4'>
-                                <img className='h-36 w-auto' src="/logo.webp" alt="Mohammad Tahir" height={70} width={70} />
+                                <img className='h-36 w-auto' src="/logo.webp" alt="Sigma Developers" height={70} width={70} />
                                 <h2 className='text-2xl font-semibold'>Sigma Developers</h2>
                                 <p className='px-8 text-center'> <span className='font-semibold'>At Sigma Developers</span>, we transform your digital dreams into reality. Specializing in vibrant E-Commerce, Business, Portfolio, and Real Estate websites, we ensure your online presence is powerful, effective, and memorable..</p>
                             </div>
