@@ -32,9 +32,8 @@ const Footer = () => {
 
                     </a>
 
-                    <a className="ml-3 " href='https://www.instagram.com/ghareebstar'>
+                    <a className="ml-3 " href='https://www.instagram.com/sigmadevelopers_ceo'>
                         <img src='/ig.png' alt="Mohammad-Tahir" height={35} width={35} className='hover:cursor-pointer rounded-full' />
-
                     </a>
 
 
