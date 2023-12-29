@@ -41,7 +41,7 @@ const ProjectCard = () => {
                                             </a>
                                         </div>
                                         <div className="p-6">
-                                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{project.category}</h2>
+                                            <h2 className="tracking-widest text-xs title-font font-medium mb-1">{project.category}</h2>
                                             <h1 className={`${darkMode && 'text-white'} title-font text-lg font-medium text-gray-900 mb-3`}>{project.title}</h1>
                                             <p className={`${darkMode && 'text-white'} leading-relaxed mb-3`}>{project.description}</p>
                                             <div className="flex items-center flex-wrap ">
