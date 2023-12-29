@@ -76,9 +76,9 @@ const ProjectCard = () => {
                     </a>
                   </div>
                   <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-mediummb-1">{project.category}</h2>
-                    <h1 className={`title-font text-lg font-medium mb-3`}>{project.title}</h1>
-                    <p className={`leading-relaxed mb-3`}>{project.description}</p>
+                    <h2 className="tracking-widest text-xs title-font font-medium mb-1 text-white">{project.category}</h2>
+                    <h1 className={`title-font text-lg font-medium mb-3 text-white`}>{project.title}</h1>
+                    <p className={`leading-relaxed mb-3 text-white`}>{project.description}</p>
                     <div className="flex items-center flex-wrap ">
 
                       <button className={`${darkMode && 'bg-black'} flex mx-auto mt-6 border-0 py-2 focus:outline-none rounded px-8`}>
