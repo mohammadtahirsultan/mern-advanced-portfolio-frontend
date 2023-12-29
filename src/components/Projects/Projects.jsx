@@ -81,7 +81,7 @@ const ProjectCard = () => {
                     <p className={`leading-relaxed mb-3 text-white`}>{project.description}</p>
                     <div className="flex items-center flex-wrap ">
 
-                      <button className={`${darkMode && 'bg-black'} flex mx-auto mt-6 border-0 py-2 focus:outline-none rounded px-8`}>
+                      <button className={`${darkMode && 'bg-black'} bg-black text-white flex mx-auto mt-6 border-0 py-2 focus:outline-none rounded px-8`}>
                         <a target='blank' href={project.link}>See the Demo </a>
                       </button>
                     </div>
