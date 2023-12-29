@@ -34,16 +34,16 @@ const ProjectCard = () => {
 
                             featuredProjects && featuredProjects.map((project) => (
                                 <div className="p-4 md:w-1/3" key={project._id}>
-                                    <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                                    <div className="h-full border-2 text-white border-opacity-60 rounded-lg overflow-hidden">
                                         <div className="rounded-lg w-full h-1/3 md:h-1/2">
                                             <a target='blank' href={project?.link} >
                                                 <img alt="content" className="w-full h-full object-cover" src={project?.image.url} />
                                             </a>
                                         </div>
                                         <div className="p-6">
-                                            <h2 className="tracking-widest text-xs title-font font-medium mb-1">{project.category}</h2>
-                                            <h1 className={`${darkMode && 'text-white'} title-font text-lg font-medium text-gray-900 mb-3`}>{project.title}</h1>
-                                            <p className={`${darkMode && 'text-white'} leading-relaxed mb-3`}>{project.description}</p>
+                                            <h2 className="tracking-widest text-white text-xs title-font font-medium mb-1">{project.category}</h2>
+                                            <h1 className={`text-white title-font text-lg font-medium mb-3`}>{project.title}</h1>
+                                            <p className={`text-white leading-relaxed mb-3`}>{project.description}</p>
                                             <div className="flex items-center flex-wrap ">
 
                                                 <button className={`${darkMode && 'bg-gray-600 hover:bg-gray-800'} flex mx-auto mt-6 text-white bg-gray-900 border-0 py-2 focus:outline-none rounded px-8`}>
